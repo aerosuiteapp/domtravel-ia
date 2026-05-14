@@ -136,6 +136,96 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--tx);min-hei
 .orc-final-btn.pdf{background:var(--am);border:none;color:var(--pr)}
 .orc-final-btn.pdf:hover{background:var(--am-d)}
 
+/* MARKETING */
+.mkt-wrap{padding:20px 24px}
+.mkt-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;flex-wrap:wrap;gap:10px}
+.mkt-title{font-size:20px;font-weight:700;color:var(--tx)}
+.mkt-header-btns{display:flex;gap:8px;flex-wrap:wrap}
+.mkt-btn{background:var(--am);color:#000;border:none;border-radius:8px;padding:8px 14px;font-size:13px;font-weight:600;cursor:pointer;transition:opacity .2s}
+.mkt-btn:hover{opacity:.85}
+.mkt-btn-ghost{background:transparent;color:var(--am);border:1px solid var(--am);border-radius:8px;padding:8px 14px;font-size:13px;font-weight:600;cursor:pointer;transition:background .2s,color .2s}
+.mkt-btn-ghost:hover{background:var(--am);color:#000}
+.mkt-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:16px}
+.mkt-card{background:var(--c2);border:1px solid var(--br);border-radius:14px;overflow:hidden;cursor:pointer;transition:transform .2s,box-shadow .2s}
+.mkt-card:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(0,0,0,.25)}
+.mkt-card-cover{width:100%;height:110px;object-fit:cover;background:var(--c3);display:flex;align-items:center;justify-content:center;font-size:36px}
+.mkt-card-cover img{width:100%;height:100%;object-fit:cover}
+.mkt-card-body{padding:12px}
+.mkt-card-name{font-size:14px;font-weight:700;color:var(--tx);margin-bottom:4px}
+.mkt-card-count{font-size:11px;color:var(--ts)}
+.mkt-panel{display:none;position:fixed;top:0;right:0;width:480px;max-width:100vw;height:100vh;background:var(--c1);border-left:1px solid var(--br);z-index:200;flex-direction:column;overflow:hidden}
+.mkt-panel.open{display:flex}
+.mkt-panel-header{padding:20px 20px 0;display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-shrink:0}
+.mkt-panel-title{font-size:18px;font-weight:700;color:var(--tx)}
+.mkt-panel-close{background:transparent;border:none;color:var(--ts);cursor:pointer;font-size:22px;line-height:1;padding:0}
+.mkt-tabs{display:flex;gap:0;border-bottom:1px solid var(--br);padding:0 20px;margin-top:12px;flex-shrink:0}
+.mkt-tab{background:transparent;border:none;border-bottom:2px solid transparent;padding:10px 14px;font-size:13px;font-weight:600;color:var(--ts);cursor:pointer;margin-bottom:-1px;transition:color .2s,border-color .2s}
+.mkt-tab.active{color:var(--am);border-bottom-color:var(--am)}
+.mkt-tab-body{flex:1;overflow-y:auto;padding:16px 20px}
+.mkt-add-row{margin-bottom:14px}
+.mkt-inp{width:100%;background:var(--c2);border:1px solid var(--br);border-radius:8px;padding:10px 12px;color:var(--tx);font-size:13px;box-sizing:border-box;margin-bottom:8px}
+.mkt-inp:focus{outline:none;border-color:var(--am)}
+.mkt-ta{resize:vertical;min-height:70px}
+.mkt-item{background:var(--c2);border:1px solid var(--br);border-radius:10px;padding:12px;margin-bottom:10px;display:flex;flex-direction:column;gap:6px}
+.mkt-item-row{display:flex;align-items:center;gap:8px}
+.mkt-item-thumb{width:56px;height:40px;border-radius:6px;object-fit:cover;background:var(--c3);flex-shrink:0}
+.mkt-item-info{flex:1;min-width:0}
+.mkt-item-title{font-size:13px;font-weight:600;color:var(--tx);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mkt-item-sub{font-size:11px;color:var(--ts);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mkt-item-actions{display:flex;gap:6px;flex-wrap:wrap}
+.mkt-ibtn{background:var(--c3);border:none;border-radius:6px;padding:5px 10px;font-size:11px;font-weight:600;color:var(--tx);cursor:pointer;transition:background .2s}
+.mkt-ibtn:hover{background:var(--am);color:#000}
+.mkt-ibtn.danger{color:#e05;}
+.mkt-ibtn.danger:hover{background:#e05;color:#fff}
+.mkt-texto-block{background:var(--c2);border:1px solid var(--br);border-radius:10px;padding:14px;margin-bottom:12px}
+.mkt-texto-label{font-size:11px;font-weight:700;color:var(--am);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px}
+.mkt-texto-content{font-size:13px;color:var(--tx);line-height:1.6;white-space:pre-wrap;margin-bottom:10px}
+.mkt-ia-btn{background:linear-gradient(135deg,#7c3aed,#4f46e5);border:none;border-radius:8px;padding:10px 16px;color:#fff;font-size:13px;font-weight:600;cursor:pointer;width:100%;margin-bottom:12px;transition:opacity .2s}
+.mkt-ia-btn:hover{opacity:.9}
+.mkt-add-dest{margin-top:20px;display:flex;gap:8px}
+.mkt-add-dest input{flex:1;background:var(--c2);border:1px solid var(--br);border-radius:8px;padding:9px 12px;color:var(--tx);font-size:13px}
+.mkt-add-dest input:focus{outline:none;border-color:var(--am)}
+@media(max-width:640px){.mkt-panel{width:100vw}.mkt-grid{grid-template-columns:repeat(auto-fill,minmax(140px,1fr))}
+}
+/* LINKS */
+.lku-wrap{padding:20px 24px}
+.lku-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:10px}
+.lku-title{font-size:20px;font-weight:700;color:var(--tx)}
+.lku-search-row{display:flex;gap:10px;margin-bottom:20px;align-items:center}
+.lku-search{flex:1;background:var(--c2);border:1px solid var(--br);border-radius:10px;padding:10px 14px;color:var(--tx);font-size:13px}
+.lku-search:focus{outline:none;border-color:var(--am)}
+.lku-add-btn{background:var(--am);color:#000;border:none;border-radius:8px;padding:10px 14px;font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap;transition:opacity .2s}
+.lku-add-btn:hover{opacity:.85}
+.lku-cat{margin-bottom:24px}
+.lku-cat-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.lku-cat-name{font-size:13px;font-weight:700;color:var(--ts);text-transform:uppercase;letter-spacing:.08em}
+.lku-cat-actions{display:flex;gap:6px}
+.lku-cat-btn{background:transparent;border:1px solid var(--br);border-radius:6px;padding:4px 10px;font-size:11px;color:var(--ts);cursor:pointer;transition:background .2s,color .2s}
+.lku-cat-btn:hover{background:var(--am);color:#000;border-color:var(--am)}
+.lku-cat-btn.danger:hover{background:#e05;color:#fff;border-color:#e05}
+.lku-items{display:flex;flex-direction:column;gap:8px}
+.lku-item{background:var(--c2);border:1px solid var(--br);border-radius:10px;padding:12px 14px;display:flex;align-items:center;gap:12px;transition:border-color .2s}
+.lku-item:hover{border-color:var(--am)}
+.lku-item-favicon{width:24px;height:24px;border-radius:4px;object-fit:contain;flex-shrink:0;background:var(--c3)}
+.lku-item-info{flex:1;min-width:0}
+.lku-item-title{font-size:14px;font-weight:600;color:var(--tx)}
+.lku-item-url{font-size:11px;color:var(--ts);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lku-item-actions{display:flex;gap:6px;flex-shrink:0}
+.lku-ibtn{background:var(--c3);border:none;border-radius:6px;padding:6px 12px;font-size:12px;font-weight:600;color:var(--tx);cursor:pointer;transition:background .2s}
+.lku-ibtn.open-btn{background:var(--am);color:#000}
+.lku-ibtn.open-btn:hover{opacity:.85}
+.lku-ibtn.danger:hover{background:#e05;color:#fff}
+.lku-modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:300;align-items:center;justify-content:center}
+.lku-modal.open{display:flex}
+.lku-modal-box{background:var(--c1);border:1px solid var(--br);border-radius:16px;padding:28px;width:420px;max-width:90vw}
+.lku-modal-title{font-size:16px;font-weight:700;color:var(--tx);margin-bottom:16px}
+.lku-ml{font-size:12px;color:var(--ts);font-weight:600;margin-bottom:4px;margin-top:12px}
+.lku-mi{width:100%;background:var(--c2);border:1px solid var(--br);border-radius:8px;padding:10px 12px;color:var(--tx);font-size:13px;box-sizing:border-box}
+.lku-mi:focus{outline:none;border-color:var(--am)}
+.lku-modal-btns{display:flex;gap:10px;margin-top:20px}
+.lku-modal-cancel{flex:1;background:var(--c3);border:none;border-radius:8px;padding:10px;color:var(--tx);font-size:14px;cursor:pointer}
+.lku-modal-save{flex:2;background:var(--am);border:none;border-radius:8px;padding:10px;color:#000;font-size:14px;font-weight:700;cursor:pointer}
+.lku-empty{text-align:center;color:var(--ts);padding:40px 0;font-size:14px}
 /* APP */
 #as{display:none;width:100vw;height:100vh;flex-direction:column;background:var(--bg)}
 .al{display:flex;flex:1;height:100vh;overflow:hidden}
@@ -435,6 +525,8 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--tx);min-hei
         <button class="mb" id="m-metricas" onclick="setMode('metricas')" style="display:none"><div class="mi">📊</div><div><div class="mn">Métricas</div><div class="md">Dashboard de uso</div></div></button>
         <button class="mb" id="m-orcamentos" onclick="setMode('orcamentos')"><div class="mi">📋</div><div><div class="mn">Orçamentos</div><div class="md">Gerador profissional</div></div></button>
         <button class="mb" id="m-docs" onclick="setMode('docs')"><div class="mi">📋</div><div><div class="mn">Documentos</div><div class="md">Guias e formulários</div></div></button>
+        <button class="mb" id="m-marketing" onclick="setMode('marketing')"><div class="mi">📁</div><div><div class="mn">Base de Marketing</div><div class="md">Mídias por destino</div></div></button>
+        <button class="mb" id="m-links" onclick="setMode('links')"><div class="mi">🔗</div><div><div class="mn">Links Úteis</div><div class="md">Sites e ferramentas</div></div></button>
       </div>
       <div class="ss" id="hist-section" style="display:none">
         <div class="ssl">Histórico</div>
@@ -628,7 +720,9 @@ var MM = {
   calc:       {i:'🧮',n:'Calculadora',d:'Orçamento de pacotes'},
   metricas:   {i:'📊',n:'Métricas',d:'Dashboard de uso'},
   docs:       {i:'📋',n:'Documentos',d:'Guias e formulários'},
-  orcamentos: {i:'📋',n:'Orçamentos',d:'Gerador profissional'}
+  orcamentos: {i:'📋',n:'Orçamentos',d:'Gerador profissional'},
+  marketing:  {i:'📁',n:'Base de Marketing',d:'Mídias por destino'},
+  links:      {i:'🔗',n:'Links Úteis',d:'Sites e ferramentas'}
 };
 var hist=[], key='', busy=false, mode='geral', wvis=true, curUser=null;
 
@@ -752,6 +846,8 @@ function setMode(m, cl) {
   if (m === 'metricas') { renderMetricas(); return; }
   if (m === 'docs') { renderDocs(); return; }
   if (m === 'orcamentos') { renderOrcamentos(); return; }
+  if (m === 'marketing') { renderMarketing(); return; }
+  if (m === 'links') { renderLinks(); return; }
   if(!wvis) showW();
   if (m === 'qualificar' && cl) {
     setTimeout(function(){
@@ -2368,6 +2464,529 @@ function orcGerarPDF() {
   }
   draw();
 })();
+
+// ══════════════════════════════════════════
+//  BASE DE MARKETING
+// ══════════════════════════════════════════
+var MKT_DEFAULTS = [
+  {name:'Cancún',    emoji:'🏖️', fotos:[], videos:[], links:[], textos:[]},
+  {name:'Orlando',   emoji:'🎢', fotos:[], videos:[], links:[], textos:[]},
+  {name:'Europa',    emoji:'🏰', fotos:[], videos:[], links:[], textos:[]},
+  {name:'Gramado',   emoji:'⛷️', fotos:[], videos:[], links:[], textos:[]},
+  {name:'Maldivas',  emoji:'🏝️', fotos:[], videos:[], links:[], textos:[]},
+  {name:'Dubai',     emoji:'🏙️', fotos:[], videos:[], links:[], textos:[]},
+  {name:'Zanzibar',  emoji:'🌊', fotos:[], videos:[], links:[], textos:[]},
+  {name:'Lisboa',    emoji:'🏛️', fotos:[], videos:[], links:[], textos:[]},
+  {name:'Maceió',    emoji:'🌴', fotos:[], videos:[], links:[], textos:[]},
+  {name:'Bonito',    emoji:'🐠', fotos:[], videos:[], links:[], textos:[]},
+  {name:'Noronha',   emoji:'🐋', fotos:[], videos:[], links:[], textos:[]},
+  {name:'Bahia',     emoji:'🎶', fotos:[], videos:[], links:[], textos:[]}
+];
+var mktCurDest = null;
+var mktCurTab = 'fotos';
+
+function getMktData() {
+  try { var d = JSON.parse(localStorage.getItem('dt_mkt_v1')); if(d&&d.length) return d; } catch(e){}
+  return JSON.parse(JSON.stringify(MKT_DEFAULTS));
+}
+function saveMktData(d) { localStorage.setItem('dt_mkt_v1', JSON.stringify(d)); }
+
+function mktCountTotal(dest) {
+  return (dest.fotos||[]).length + (dest.videos||[]).length + (dest.links||[]).length + (dest.textos||[]).length;
+}
+
+function renderMarketing() {
+  var data = getMktData();
+  var h = '<div class="mkt-wrap">';
+  h += '<div class="mkt-header"><div class="mkt-title">📁 Base de Marketing</div>';
+  if (curUser && curUser.role === 'admin') {
+    h += '<div class="mkt-header-btns"><div class="mkt-add-dest">';
+    h += '<input class="mkt-inp" id="mkt-new-name" placeholder="Novo destino..." style="margin:0">';
+    h += '<button class="mkt-btn" onclick="mktAddDest()">+ Adicionar</button></div></div>';
+  }
+  h += '</div>';
+  h += '<div class="mkt-grid">';
+  for (var i = 0; i < data.length; i++) {
+    var d = data[i];
+    var cnt = mktCountTotal(d);
+    h += '<div class="mkt-card" onclick="mktOpenDest('+i+')">';
+    h += '<div class="mkt-card-cover">' + (d.emoji||'📁') + '</div>';
+    h += '<div class="mkt-card-body">';
+    h += '<div class="mkt-card-name">'+d.name+'</div>';
+    h += '<div class="mkt-card-count">'+cnt+' mídia'+(cnt===1?'':'s')+'</div>';
+    h += '</div></div>';
+  }
+  h += '</div>';
+  // Side panel
+  h += '<div class="mkt-panel" id="mkt-panel">';
+  h += '<div class="mkt-panel-header">';
+  h += '<div class="mkt-panel-title" id="mkt-panel-title">Destino</div>';
+  h += '<button class="mkt-panel-close" onclick="mktCloseDest()">✕</button>';
+  h += '</div>';
+  h += '<div class="mkt-tabs">';
+  h += '<button class="mkt-tab active" onclick="mktSwitchTab(0,this)">📷 Fotos</button>';
+  h += '<button class="mkt-tab" onclick="mktSwitchTab(1,this)">🎬 Vídeos</button>';
+  h += '<button class="mkt-tab" onclick="mktSwitchTab(2,this)">🔗 Links</button>';
+  h += '<button class="mkt-tab" onclick="mktSwitchTab(3,this)">📝 Textos</button>';
+  h += '</div>';
+  h += '<div class="mkt-tab-body" id="mkt-tab-body"></div>';
+  h += '</div>';
+  h += '</div>';
+  var msgs = document.getElementById('msgs');
+  msgs.innerHTML = h;
+}
+
+function mktAddDest() {
+  var inp = document.getElementById('mkt-new-name');
+  var name = inp ? inp.value.trim() : '';
+  if (!name) return;
+  var data = getMktData();
+  data.push({name:name, emoji:'🌍', fotos:[], videos:[], links:[], textos:[]});
+  saveMktData(data);
+  renderMarketing();
+}
+
+function mktOpenDest(idx) {
+  mktCurDest = idx;
+  mktCurTab = 'fotos';
+  var data = getMktData();
+  var panel = document.getElementById('mkt-panel');
+  if (!panel) return;
+  document.getElementById('mkt-panel-title').textContent = data[idx].name;
+  panel.classList.add('open');
+  mktRenderTab();
+}
+
+function mktCloseDest() {
+  var panel = document.getElementById('mkt-panel');
+  if (panel) panel.classList.remove('open');
+  mktCurDest = null;
+}
+
+function mktSwitchTab(tab, btn) {
+  var tabNames = ['fotos','videos','links','textos'];
+  mktCurTab = (typeof tab === 'number') ? tabNames[tab] : tab;
+  document.querySelectorAll('.mkt-tab').forEach(function(b){ b.classList.remove('active'); });
+  if (btn) btn.classList.add('active');
+  mktRenderTab();
+}
+
+function mktRenderTab() {
+  var body = document.getElementById('mkt-tab-body');
+  if (!body || mktCurDest === null) return;
+  var data = getMktData();
+  var dest = data[mktCurDest];
+  var isAdmin = curUser && curUser.role === 'admin';
+  var h = '';
+
+  if (mktCurTab === 'fotos') {
+    if (isAdmin) {
+      h += '<div class="mkt-add-row">';
+      h += '<input class="mkt-inp" id="mkt-foto-url" placeholder="URL da imagem (https://...)">';
+      h += '<input class="mkt-inp" id="mkt-foto-cap" placeholder="Legenda (opcional)">';
+      h += '<button class="mkt-btn" onclick="mktAddFoto()" style="width:100%">+ Adicionar foto</button>';
+      h += '</div>';
+    }
+    var fotos = dest.fotos || [];
+    if (fotos.length === 0) { h += '<div class="lku-empty">Nenhuma foto adicionada.</div>'; }
+    for (var i = 0; i < fotos.length; i++) {
+      var f = fotos[i];
+      h += '<div class="mkt-item"><div class="mkt-item-row">';
+      h += '<img class="mkt-item-thumb" src="'+f.url+'" onerror="mktImgErr(this)">';
+      h += '<div class="mkt-item-info"><div class="mkt-item-title">'+(f.cap||'Foto '+(i+1))+'</div>';
+      h += '<div class="mkt-item-sub">'+f.url+'</div></div></div>';
+      h += '<div class="mkt-item-actions">';
+      h += '<button class="mkt-ibtn" onclick="mktCopyFoto('+i+')">Copiar link</button>';
+      if (isAdmin) h += '<button class="mkt-ibtn danger" onclick="mktRemFoto('+i+')">Remover</button>';
+      h += '</div></div>';
+    }
+
+  } else if (mktCurTab === 'videos') {
+    if (isAdmin) {
+      h += '<div class="mkt-add-row">';
+      h += '<input class="mkt-inp" id="mkt-vid-title" placeholder="Título do vídeo">';
+      h += '<input class="mkt-inp" id="mkt-vid-url" placeholder="URL YouTube/Vimeo">';
+      h += '<button class="mkt-btn" onclick="mktAddVideo()" style="width:100%">+ Adicionar vídeo</button>';
+      h += '</div>';
+    }
+    var vids = dest.videos || [];
+    if (vids.length === 0) { h += '<div class="lku-empty">Nenhum vídeo adicionado.</div>'; }
+    for (var j = 0; j < vids.length; j++) {
+      var v = vids[j];
+      var thumb = mktYtThumb(v.url);
+      h += '<div class="mkt-item"><div class="mkt-item-row">';
+      if (thumb) h += '<img class="mkt-item-thumb" src="'+thumb+'" onerror="mktImgErr(this)">';
+      h += '<div class="mkt-item-info"><div class="mkt-item-title">'+v.title+'</div>';
+      h += '<div class="mkt-item-sub">'+v.url+'</div></div></div>';
+      h += '<div class="mkt-item-actions">';
+      h += '<button class="mkt-ibtn" onclick="mktCopyVideo('+j+')">Copiar link</button>';
+      h += '<button class="mkt-ibtn" onclick="mktOpenVideo('+j+')">Abrir</button>';
+      if (isAdmin) h += '<button class="mkt-ibtn danger" onclick="mktRemVideo('+j+')">Remover</button>';
+      h += '</div></div>';
+    }
+
+  } else if (mktCurTab === 'links') {
+    if (isAdmin) {
+      h += '<div class="mkt-add-row">';
+      h += '<input class="mkt-inp" id="mkt-lnk-title" placeholder="Título">';
+      h += '<input class="mkt-inp" id="mkt-lnk-url" placeholder="URL (https://)">';
+      h += '<input class="mkt-inp" id="mkt-lnk-desc" placeholder="Descrição curta (opcional)">';
+      h += '<button class="mkt-btn" onclick="mktAddLink()" style="width:100%">+ Adicionar link</button>';
+      h += '</div>';
+    }
+    var lks = dest.links || [];
+    if (lks.length === 0) { h += '<div class="lku-empty">Nenhum link adicionado.</div>'; }
+    for (var k = 0; k < lks.length; k++) {
+      var lk = lks[k];
+      h += '<div class="mkt-item"><div class="mkt-item-row">';
+      h += '<div class="mkt-item-info"><div class="mkt-item-title">'+lk.title+'</div>';
+      h += '<div class="mkt-item-sub">'+(lk.desc||lk.url)+'</div></div></div>';
+      h += '<div class="mkt-item-actions">';
+      h += '<button class="mkt-ibtn" onclick="mktCopyLink('+k+')">Copiar</button>';
+      h += '<button class="mkt-ibtn" onclick="mktOpenLink('+k+')">Abrir</button>';
+      if (isAdmin) h += '<button class="mkt-ibtn danger" onclick="mktRemLink('+k+')">Remover</button>';
+      h += '</div></div>';
+    }
+
+  } else if (mktCurTab === 'textos') {
+    h += '<button class="mkt-ia-btn" id="mkt-ia-btn" onclick="mktGerarTextos()">✨ Gerar conteúdo com IA para '+dest.name+'</button>';
+    var txts = dest.textos || [];
+    if (txts.length === 0 && !isAdmin) { h += '<div class="lku-empty">Nenhum texto adicionado.</div>'; }
+    if (isAdmin) {
+      h += '<div class="mkt-add-row">';
+      h += '<select class="mkt-inp" id="mkt-txt-type"><option value="descricao">Descrição do destino</option><option value="instagram">Legenda Instagram</option><option value="whatsapp">Texto WhatsApp</option><option value="outro">Outro</option></select>';
+      h += '<textarea class="mkt-inp mkt-ta" id="mkt-txt-content" placeholder="Texto de marketing..."></textarea>';
+      h += '<button class="mkt-btn" onclick="mktAddTexto()" style="width:100%">+ Adicionar texto</button>';
+      h += '</div>';
+    }
+    var labels = {descricao:'\uD83D\uDCC4 Descrição', instagram:'\uD83D\uDCF8 Instagram', whatsapp:'\uD83D\uDCAC WhatsApp', outro:'\uD83D\uDCDD Outro'};
+    for (var t = 0; t < txts.length; t++) {
+      var tx = txts[t];
+      h += '<div class="mkt-texto-block">';
+      h += '<div class="mkt-texto-label">'+(labels[tx.type]||tx.type)+'</div>';
+      h += '<div class="mkt-texto-content">'+tx.content.replace(/</g,'&lt;').replace(/>/g,'&gt;')+'</div>';
+      h += '<div class="mkt-item-actions">';
+      h += '<button class="mkt-ibtn" onclick="mktCopyTexto('+t+')">Copiar</button>';
+      if (isAdmin) h += '<button class="mkt-ibtn danger" onclick="mktRemTexto('+t+')">Remover</button>';
+      h += '</div></div>';
+    }
+  }
+
+  body.innerHTML = h;
+}
+function mktYtThumb(url) {
+  var m = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&?]+)/);
+  if (m) return 'https://img.youtube.com/vi/'+m[1]+'/mqdefault.jpg';
+  return '';
+}
+
+function mktCopy(text) {
+  navigator.clipboard.writeText(text).then(function(){ alert('Copiado!'); }).catch(function(){ prompt('Copie:', text); });
+}
+
+function mktMutate(fn) {
+  var data = getMktData();
+  fn(data[mktCurDest]);
+  saveMktData(data);
+  mktRenderTab();
+  // refresh card count in grid
+  var cards = document.querySelectorAll('.mkt-card-count');
+  var cnt = mktCountTotal(data[mktCurDest]);
+  if (cards[mktCurDest]) cards[mktCurDest].textContent = cnt+' mídia'+(cnt===1?'':'s');
+}
+
+function mktCopyFoto(i)  { mktCopy(getMktData()[mktCurDest].fotos[i].url); }
+function mktCopyVideo(i) { mktCopy(getMktData()[mktCurDest].videos[i].url); }
+function mktOpenVideo(i) { window.open(getMktData()[mktCurDest].videos[i].url, '_blank'); }
+function mktCopyLink(i)  { mktCopy(getMktData()[mktCurDest].links[i].url); }
+function mktOpenLink(i)  { window.open(getMktData()[mktCurDest].links[i].url, '_blank'); }
+function mktCopyTexto(i) { mktCopy(getMktData()[mktCurDest].textos[i].content); }
+function mktImgErr(el)   { el.style.display = 'none'; }
+
+function mktAddFoto() {
+  var url = (document.getElementById('mkt-foto-url')||{}).value||'';
+  var cap = (document.getElementById('mkt-foto-cap')||{}).value||'';
+  if (!url) return alert('Informe a URL da imagem.');
+  mktMutate(function(d){ d.fotos.push({url:url,cap:cap}); });
+}
+function mktRemFoto(i) {
+  if (!confirm('Remover foto?')) return;
+  mktMutate(function(d){ d.fotos.splice(i,1); });
+}
+function mktAddVideo() {
+  var t = (document.getElementById('mkt-vid-title')||{}).value||'';
+  var u = (document.getElementById('mkt-vid-url')||{}).value||'';
+  if (!t||!u) return alert('Preencha título e URL.');
+  mktMutate(function(d){ d.videos.push({title:t,url:u}); });
+}
+function mktRemVideo(i) {
+  if (!confirm('Remover vídeo?')) return;
+  mktMutate(function(d){ d.videos.splice(i,1); });
+}
+function mktAddLink() {
+  var t = (document.getElementById('mkt-lnk-title')||{}).value||'';
+  var u = (document.getElementById('mkt-lnk-url')||{}).value||'';
+  var desc = (document.getElementById('mkt-lnk-desc')||{}).value||'';
+  if (!t||!u) return alert('Preencha título e URL.');
+  mktMutate(function(d){ d.links.push({title:t,url:u,desc:desc}); });
+}
+function mktRemLink(i) {
+  if (!confirm('Remover link?')) return;
+  mktMutate(function(d){ d.links.splice(i,1); });
+}
+function mktAddTexto() {
+  var tp = (document.getElementById('mkt-txt-type')||{}).value||'outro';
+  var ct = (document.getElementById('mkt-txt-content')||{}).value||'';
+  if (!ct) return alert('Escreva o texto.');
+  mktMutate(function(d){ d.textos.push({type:tp,content:ct}); });
+}
+function mktRemTexto(i) {
+  if (!confirm('Remover texto?')) return;
+  mktMutate(function(d){ d.textos.splice(i,1); });
+}
+
+function mktGerarTextos() {
+  if (!key) return alert('Configure a chave de API primeiro.');
+  var data = getMktData();
+  var dest = data[mktCurDest];
+  var btn = document.getElementById('mkt-ia-btn');
+  if (btn) { btn.disabled = true; btn.textContent = '⏳ Gerando textos...'; }
+  var prompt = 'Gere textos de marketing para o destino "'+dest.name+'" para uma agência de viagens premium. Retorne exatamente 3 blocos separados por ---:\n1) Descrição do destino (3-4 parágrafos, rico, vendedor)\n2) Legenda para Instagram (até 200 caracteres + 10 hashtags)\n3) Texto para WhatsApp (curto, persuasivo, com emojis, máx 300 caracteres)\nNão inclua títulos, apenas o texto de cada bloco separado por ---.';
+  fetch('https://api.anthropic.com/v1/messages', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'x-api-key': key,
+      'anthropic-version': '2023-06-01',
+      'anthropic-dangerous-direct-browser-access': 'true'
+    },
+    body: JSON.stringify({
+      model: 'claude-sonnet-4-20250514',
+      max_tokens: 1024,
+      messages: [{role:'user', content: prompt}]
+    })
+  }).then(function(r){ return r.json(); }).then(function(rj) {
+    var text = rj.content && rj.content[0] ? rj.content[0].text : '';
+    var parts = text.split('---');
+    var types = ['descricao','instagram','whatsapp'];
+    var data2 = getMktData();
+    for (var i = 0; i < parts.length && i < 3; i++) {
+      var ct = parts[i].trim();
+      if (ct) data2[mktCurDest].textos.push({type:types[i], content:ct});
+    }
+    saveMktData(data2);
+    mktRenderTab();
+  }).catch(function(e) {
+    alert('Erro ao gerar textos: '+e.message);
+  }).finally(function() {
+    if (btn) { btn.disabled = false; btn.textContent = '✨ Gerar conteúdo com IA para '+dest.name; }
+  });
+}
+
+// ══════════════════════════════════════════
+//  LINKS ÚTEIS
+// ══════════════════════════════════════════
+var LKU_DEFAULTS = [
+  {name:'✈️ OPERADORAS', links:[
+    {title:'CVC',url:'https://www.cvc.com.br'},
+    {title:'Azul Viagens',url:'https://www.azulviagens.com'},
+    {title:'Flytour',url:'https://www.flytour.com.br'},
+    {title:'Trend Operadora',url:'https://www.trend.tur.br'},
+    {title:'Visual Turismo',url:'https://www.visualtur.com.br'}
+  ]},
+  {name:'🏨 HOTÉIS', links:[
+    {title:'Booking.com',url:'https://www.booking.com'},
+    {title:'Hotels.com',url:'https://www.hotels.com'},
+    {title:'Marriott',url:'https://www.marriott.com'},
+    {title:'IHG Hotels',url:'https://www.ihg.com'}
+  ]},
+  {name:'✈️ AÉREAS', links:[
+    {title:'Azul Linhas Aéreas',url:'https://www.voeazul.com.br'},
+    {title:'Gol Linhas Aéreas',url:'https://www.voegol.com.br'},
+    {title:'LATAM Airlines',url:'https://www.latam.com'},
+    {title:'American Airlines',url:'https://www.aa.com'},
+    {title:'TAP Air Portugal',url:'https://www.flytap.com'}
+  ]},
+  {name:'📋 DOCUMENTAÇÃO', links:[
+    {title:'Passaporte — Polícia Federal',url:'https://www.gov.br/pt-br/servicos/emitir-passaporte'},
+    {title:'Visto EUA — DS-160',url:'https://ceac.state.gov/genniv'},
+    {title:'Visto Schengen',url:'https://www.vfsvisaonline.com/brazil'},
+    {title:'Anvisa — Vacinas obrigatórias',url:'https://www.gov.br/anvisa/pt-br/assuntos/viajante'}
+  ]},
+  {name:'🛡️ SEGUROS VIAGEM', links:[
+    {title:'Assist Card',url:'https://www.assistcard.com.br'},
+    {title:'Multiassist',url:'https://www.multiassist.com.br'},
+    {title:'GTA Seguros',url:'https://www.gta.com.br'}
+  ]},
+  {name:'🛠️ FERRAMENTAS', links:[
+    {title:'Google Maps',url:'https://maps.google.com'},
+    {title:'Google Translate',url:'https://translate.google.com'},
+    {title:'XE Currency',url:'https://www.xe.com'},
+    {title:'Kayak',url:'https://www.kayak.com.br'},
+    {title:'TripAdvisor',url:'https://www.tripadvisor.com.br'}
+  ]},
+  {name:'📱 DOM TRAVEL', links:[
+    {title:'Site Dom Travel',url:'https://www.domtravel.com.br'},
+    {title:'WhatsApp Dom Travel',url:'https://wa.me/5517992017573'},
+    {title:'Instagram @bydomtravel',url:'https://www.instagram.com/bydomtravel'}
+  ]}
+];
+
+var lkuModal = {open:false, mode:'', catIdx:-1, lkIdx:-1};
+
+function getLkuData() {
+  try { var d = JSON.parse(localStorage.getItem('dt_links_v1')); if(d&&d.length) return d; } catch(e){}
+  return JSON.parse(JSON.stringify(LKU_DEFAULTS));
+}
+function saveLkuData(d) { localStorage.setItem('dt_links_v1', JSON.stringify(d)); }
+
+function renderLinks() {
+  var data = getLkuData();
+  var isAdmin = curUser && curUser.role === 'admin';
+  var h = '<div class="lku-wrap">';
+  h += '<div class="lku-header"><div class="lku-title">🔗 Links Úteis</div></div>';
+  h += '<div class="lku-search-row">';
+  h += '<input class="lku-search" id="lku-search" placeholder="🔍 Buscar links..." oninput="lkuFilter(this.value)">';
+  if (isAdmin) h += '<button class="lku-add-btn" onclick="lkuOpenAddCat()">+ Categoria</button>';
+  h += '</div>';
+  h += '<div id="lku-list">';
+  h += lkuBuildList(data, isAdmin, '');
+  h += '</div>';
+  // Modal
+  h += '<div class="lku-modal" id="lku-modal">';
+  h += '<div class="lku-modal-box" id="lku-modal-box"></div>';
+  h += '</div>';
+  h += '</div>';
+  var msgs = document.getElementById('msgs');
+  msgs.innerHTML = h;
+}
+
+function lkuBuildList(data, isAdmin, filter) {
+  var q = filter.toLowerCase();
+  var h = '';
+  for (var c = 0; c < data.length; c++) {
+    var cat = data[c];
+    var items = cat.links.filter(function(lk){ return !q || lk.title.toLowerCase().indexOf(q)>=0 || lk.url.toLowerCase().indexOf(q)>=0; });
+    if (q && items.length === 0) continue;
+    h += '<div class="lku-cat" data-cat="'+c+'">';
+    h += '<div class="lku-cat-header">';
+    h += '<div class="lku-cat-name">'+cat.name+'</div>';
+    if (isAdmin) {
+      h += '<div class="lku-cat-actions">';
+      h += '<button class="lku-cat-btn" onclick="lkuOpenAddLink('+c+')">+ Link</button>';
+      h += '<button class="lku-cat-btn danger" onclick="lkuRemCat('+c+')">Remover cat.</button>';
+      h += '</div>';
+    }
+    h += '</div>';
+    h += '<div class="lku-items">';
+    var showItems = q ? items : cat.links;
+    for (var l = 0; l < showItems.length; l++) {
+      var lk = q ? showItems[l] : cat.links[l];
+      var lkIdx = q ? cat.links.indexOf(lk) : l;
+      var domain = '';
+      try { domain = new URL(lk.url).hostname; } catch(e){ domain = lk.url; }
+      var faviconUrl = 'https://www.google.com/s2/favicons?domain='+domain+'&sz=32';
+      h += '<div class="lku-item">';
+      h += '<img class="lku-item-favicon" src="'+faviconUrl+'" onerror="lkuFavErr(this)" alt="">';
+      h += '<div class="lku-item-info"><div class="lku-item-title">'+lk.title+'</div>';
+      h += '<div class="lku-item-url">'+lk.url+'</div></div>';
+      h += '<div class="lku-item-actions">';
+      if (isAdmin) h += '<button class="lku-ibtn" onclick="lkuOpenEditLink('+c+','+lkIdx+')">Editar</button>';
+      if (isAdmin) h += '<button class="lku-ibtn danger" onclick="lkuRemLink('+c+','+lkIdx+')">×</button>';
+      h += '<button class="lku-ibtn open-btn" onclick="lkuOpenLink('+c+','+lkIdx+')">Abrir ↗</button>';
+      h += '</div></div>';
+    }
+    h += '</div></div>';
+  }
+  if (!h) h = '<div class="lku-empty">Nenhum link encontrado para "'+filter+'".</div>';
+  return h;
+}
+function lkuFilter(val) {
+  var data = getLkuData();
+  var isAdmin = curUser && curUser.role === 'admin';
+  var list = document.getElementById('lku-list');
+  if (list) list.innerHTML = lkuBuildList(data, isAdmin, val);
+}
+
+function lkuRemCat(c) {
+  if (!confirm('Remover categoria e todos os links?')) return;
+  var data = getLkuData();
+  data.splice(c, 1);
+  saveLkuData(data);
+  renderLinks();
+}
+
+function lkuRemLink(c, l) {
+  if (!confirm('Remover este link?')) return;
+  var data = getLkuData();
+  data[c].links.splice(l, 1);
+  saveLkuData(data);
+  renderLinks();
+}
+
+function lkuOpenModal(mode, catIdx, lkIdx) {
+  var modeStr = ['addcat','addlink','editlink'][mode] || mode;
+  lkuModal = {open:true, mode:modeStr, catIdx:catIdx, lkIdx:lkIdx};
+  var box = document.getElementById('lku-modal-box');
+  var data = getLkuData();
+  var h = '';
+  if (modeStr === 'addcat') {
+    h = '<div class="lku-modal-title">Nova Categoria</div>';
+    h += '<div class="lku-ml">Nome da categoria</div>';
+    h += '<input class="lku-mi" id="lku-mi-catname" placeholder="Ex: 🌍 CRUZEIROS">';
+  } else if (mode === 'addlink') {
+    h = '<div class="lku-modal-title">Adicionar Link em: '+data[catIdx].name+'</div>';
+    h += '<div class="lku-ml">Título</div><input class="lku-mi" id="lku-mi-title" placeholder="Nome do site">';
+    h += '<div class="lku-ml">URL</div><input class="lku-mi" id="lku-mi-url" placeholder="https://">';
+  } else if (mode === 'editlink') {
+    var lk = data[catIdx].links[lkIdx];
+    h = '<div class="lku-modal-title">Editar Link</div>';
+    h += '<div class="lku-ml">Título</div><input class="lku-mi" id="lku-mi-title" value="'+lk.title+'">';
+    h += '<div class="lku-ml">URL</div><input class="lku-mi" id="lku-mi-url" value="'+lk.url+'">';
+  }
+  h += '<div class="lku-modal-btns">';
+  h += '<button class="lku-modal-cancel" onclick="lkuCloseModal()">Cancelar</button>';
+  h += '<button class="lku-modal-save" onclick="lkuSaveModal()">Salvar</button>';
+  h += '</div>';
+  if (box) box.innerHTML = h;
+  var modal = document.getElementById('lku-modal');
+  if (modal) modal.classList.add('open');
+}
+
+function lkuOpenLink(c, l) { window.open(getLkuData()[c].links[l].url, '_blank'); }
+function lkuFavErr(el) { el.style.display = 'none'; }
+function lkuOpenAddCat() { lkuOpenModal(0,-1,-1); }
+function lkuOpenAddLink(c) { lkuOpenModal(1,c,-1); }
+function lkuOpenEditLink(c,l) { lkuOpenModal(2,c,l); }
+
+function lkuCloseModal() {
+  var modal = document.getElementById('lku-modal');
+  if (modal) modal.classList.remove('open');
+}
+
+function lkuSaveModal() {
+  var data = getLkuData();
+  var m = lkuModal;
+  if (m.mode === 'addcat') {
+    var nm = (document.getElementById('lku-mi-catname')||{}).value||'';
+    if (!nm) return alert('Informe o nome da categoria.');
+    data.push({name:nm, links:[]});
+  } else if (m.mode === 'addlink') {
+    var t = (document.getElementById('lku-mi-title')||{}).value||'';
+    var u = (document.getElementById('lku-mi-url')||{}).value||'';
+    if (!t||!u) return alert('Preencha todos os campos.');
+    data[m.catIdx].links.push({title:t, url:u});
+  } else if (m.mode === 'editlink') {
+    var et = (document.getElementById('lku-mi-title')||{}).value||'';
+    var eu = (document.getElementById('lku-mi-url')||{}).value||'';
+    if (!et||!eu) return alert('Preencha todos os campos.');
+    data[m.catIdx].links[m.lkIdx] = {title:et, url:eu};
+  }
+  saveLkuData(data);
+  lkuCloseModal();
+  renderLinks();
+}
+
 </script>
 </body>
 </html>
