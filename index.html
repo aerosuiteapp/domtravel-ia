@@ -170,6 +170,35 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--tx);min-hei
 .pdf-btn svg{width:11px;height:11px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
 ::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:var(--bg4);border-radius:10px}
 @media(max-width:640px){.sb{display:none}.lc{margin:16px;padding:32px 20px}.ci{padding:0 14px}.wg{grid-template-columns:1fr}.tb{padding:0 14px}.ia{padding:12px 14px 16px}}
+
+/* OBJEÇÕES */
+.obj-grid{padding:16px 24px 32px;max-width:820px;margin:0 auto;width:100%}
+.obj-category{margin-bottom:22px}
+.obj-cat-title{font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--am);margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid rgba(255,204,41,0.2);display:flex;align-items:center;gap:6px}
+.obj-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px}
+.obj-card{background:var(--bg2);border:1px solid var(--b2);border-radius:var(--rs);padding:12px 14px;cursor:pointer;transition:border-color .15s,background .15s;font-size:13px;color:var(--tx);line-height:1.4}
+.obj-card:hover{border-color:rgba(255,204,41,0.4);background:var(--bg3)}
+.obj-panel{background:var(--bg2);border:1px solid var(--b2);border-radius:20px;padding:28px 28px 24px;width:100%;max-width:520px;max-height:82vh;overflow-y:auto;animation:su .25s cubic-bezier(.16,1,.3,1) both}
+.obj-section{margin-bottom:12px;padding:14px;background:var(--bg3);border-radius:var(--rx)}
+.obj-section-title{font-size:10px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--am);margin-bottom:6px}
+.obj-section-body{font-size:13px;color:var(--tx2);line-height:1.7}
+.obj-phrase{background:rgba(255,204,41,0.07);border:1px solid rgba(255,204,41,0.18);border-radius:var(--rx);padding:12px 14px;font-size:13px;color:var(--tx);line-height:1.65;font-style:italic;margin-bottom:14px}
+.use-chat-btn{width:100%;padding:11px;background:var(--am);color:var(--pr);border:none;border-radius:var(--rx);font-family:'Syne',sans-serif;font-size:14px;font-weight:700;cursor:pointer;transition:background .15s}
+.use-chat-btn:hover{background:var(--am-d)}
+
+/* MENSAGENS WHATSAPP */
+.msg-grid{padding:16px 24px 32px;max-width:820px;margin:0 auto;width:100%}
+.msg-category{margin-bottom:24px}
+.msg-cat-title{font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--am);margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid rgba(255,204,41,0.2);display:flex;align-items:center;gap:6px}
+.msg-card{background:var(--bg2);border:1px solid var(--b2);border-radius:var(--rs);padding:16px;margin-bottom:10px}
+.msg-card-name{font-size:11.5px;font-weight:500;color:var(--tx3);text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px}
+.msg-body{font-size:13px;color:var(--tx2);line-height:1.8;white-space:pre-wrap;margin-bottom:12px;padding:12px;background:var(--bg3);border-radius:var(--rx)}
+.msg-var{color:var(--am);font-weight:600}
+.msg-actions{display:flex;gap:8px;flex-wrap:wrap}
+.msg-copy-btn{display:flex;align-items:center;gap:5px;padding:7px 14px;border:1px solid var(--b2);border-radius:var(--rx);background:none;font-size:12px;color:var(--tx2);cursor:pointer;font-family:'Inter',sans-serif;transition:background .15s,color .15s}
+.msg-copy-btn:hover{background:var(--bg3);color:var(--tx)}
+.msg-ai-btn{display:flex;align-items:center;gap:5px;padding:7px 14px;border:1px solid rgba(255,204,41,0.25);border-radius:var(--rx);background:rgba(255,204,41,0.08);font-size:12px;color:var(--am);cursor:pointer;font-family:'Inter',sans-serif;transition:background .15s}
+.msg-ai-btn:hover{background:rgba(255,204,41,0.18)}
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
@@ -222,6 +251,8 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--tx);min-hei
         <button class="mb" id="m-venda" onclick="setMode('venda')"><div class="mi">💰</div><div><div class="mn">Argumentos de venda</div><div class="md">Fechar mais</div></div></button>
         <button class="mb" id="m-biblioteca" onclick="setMode('biblioteca')"><div class="mi">🌍</div><div><div class="mn">Biblioteca</div><div class="md">Cards de destinos</div></div></button>
         <button class="mb" id="m-qualificar" onclick="setMode('qualificar')"><div class="mi">🎯</div><div><div class="mn">Qualificar cliente</div><div class="md">Entrevista guiada</div></div></button>
+        <button class="mb" id="m-objbase" onclick="setMode('objbase')"><div class="mi">🛡️</div><div><div class="mn">Objeções</div><div class="md">Base de respostas</div></div></button>
+        <button class="mb" id="m-whatsapp" onclick="setMode('whatsapp')"><div class="mi">💬</div><div><div class="mn">Mensagens</div><div class="md">Templates WhatsApp</div></div></button>
       </div>
       <div class="ss" id="hist-section" style="display:none">
         <div class="ssl">Histórico</div>
@@ -335,6 +366,21 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--tx);min-hei
   </div>
 </div>
 
+<!-- MODAL DETALHE OBJEÇÃO -->
+<div class="mo" id="objm">
+  <div class="obj-panel">
+    <div class="mhd">
+      <div>
+        <div id="obj-cat-label" style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--am);margin-bottom:4px"></div>
+        <h2 class="mt2" id="obj-title"></h2>
+      </div>
+      <button class="mc3" onclick="closeObjDetail()"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    </div>
+    <div id="obj-body"></div>
+    <button class="use-chat-btn" onclick="useObjInChat()">💬 Usar no chat</button>
+  </div>
+</div>
+
 <script>
 var USERS = [{"email": "danilocosta@domtravel.com.br", "senha": "Danilo@2025", "nome": "Danilo", "role": "admin"}, {"email": "andreiavieira@domtravel.com.br", "senha": "DomTravel@2025", "nome": "Andreia", "role": "agent"}, {"email": "thamyresmota@domtravel.com.br", "senha": "DomTravel@2025", "nome": "Thamyres", "role": "agent"}, {"email": "financeiro@domtravel.com.br", "senha": "DomTravel@2025", "nome": "Financeiro", "role": "agent"}, {"email": "nataliacosta@domtravel.com.br", "senha": "DomTravel@2025", "nome": "Natalia", "role": "agent"}, {"email": "thiagosimoes@domtravel.com.br", "senha": "DomTravel@2025", "nome": "Thiago", "role": "agent"}];
 var LP_B64 = 'data:image/png;base64,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';
@@ -357,7 +403,9 @@ var MM = {
   destino:    {i:'✈️',n:'Pesquisar destino',d:'Info e argumentos'},
   venda:      {i:'💰',n:'Argumentos de venda',d:'Fechar mais'},
   biblioteca: {i:'🌍',n:'Biblioteca',d:'Cards de destinos'},
-  qualificar: {i:'🎯',n:'Qualificar cliente',d:'Entrevista guiada'}
+  qualificar: {i:'🎯',n:'Qualificar cliente',d:'Entrevista guiada'},
+  objbase:    {i:'🛡️',n:'Objeções',d:'Base de respostas'},
+  whatsapp:   {i:'💬',n:'Mensagens',d:'Templates WhatsApp'}
 };
 var hist=[], key='', busy=false, mode='geral', wvis=true, curUser=null;
 
@@ -454,6 +502,8 @@ function setMode(m, cl) {
   }
   if(cl) hist=[];
   if (m === 'biblioteca') { renderBiblioteca(); return; }
+  if (m === 'objbase') { renderObjBase(); return; }
+  if (m === 'whatsapp') { renderWhatsapp(); return; }
   if(!wvis) showW();
   if (m === 'qualificar' && cl) {
     setTimeout(function(){
@@ -647,6 +697,302 @@ function restoreConversation(id) {
   wvis = false;
   hist.forEach(function(m){ addMsg(m.role==='assistant'?'ai':'user', m.content); });
   document.getElementById('cc').scrollTop = 99999;
+}
+
+// ── BASE DE OBJEÇÕES ─────────────────────────────────────────────────────────
+var OBJECTIONS = {
+  preco: {
+    label: 'PREÇO',
+    icon: '💰',
+    items: [
+      {
+        text: 'Está muito caro',
+        argumento: 'O preço reflete qualidade, segurança e curadoria especializada. Uma viagem mal planejada pode sair muito mais cara no final com imprevistos, reembolsos e retrabalho.',
+        reposicionamento: 'Divida o valor por dia de viagem. Uma viagem de 10 dias a R$10.000 é R$1.000/dia — menos do que muitos gastam em um fim de semana em São Paulo com hotel, jantar e transporte.',
+        frase: '"Entendo sua preocupação com o valor. Vamos ver o que compõe esse preço e o que podemos ajustar sem comprometer o que torna essa viagem especial para você?"'
+      },
+      {
+        text: 'Vou esperar uma promoção',
+        argumento: 'Passagens e hotéis raramente ficam mais baratos esperando — especialmente para datas específicas. Promoções reais são raras e geralmente exigem flexibilidade total.',
+        reposicionamento: 'O custo de esperar pode ser a perda de disponibilidade, aumento de preços por sazonalidade ou a não realização do sonho. O melhor preço é aquele que você consegue agora com garantia de reserva.',
+        frase: '"Promoções existem, mas costumam exigir datas e destinos fixos. Posso garantir o melhor preço disponível agora e monitorar qualquer queda — quer que eu faça isso por você?"'
+      },
+      {
+        text: 'Achei mais barato na internet',
+        argumento: 'Preços online geralmente excluem taxas, seguro, bagagem e suporte. O custo real raramente é o que aparece na tela — e sem um consultor, qualquer imprevisto é problema seu.',
+        reposicionamento: 'Compare o pacote completo: o que inclui suporte 24h, assistência em viagem, seguro e flexibilidade de cancelamento. Isso tem valor que sites não entregam.',
+        frase: '"Ótimo que você pesquisou! Posso comparar exatamente o que encontrou com o que eu ofereço. Na maioria das vezes o total final é similar — mas o suporte e a segurança são muito diferentes."'
+      },
+      {
+        text: 'Posso parcelar em mais vezes?',
+        argumento: 'Parcelamento facilita o planejamento financeiro e permite que a viagem aconteça sem comprometer o orçamento mensal. É uma ferramenta de fechamento, não um problema.',
+        reposicionamento: 'Dividir em mais parcelas reduz o impacto mensal e torna o sonho acessível. Uma viagem dos sonhos pode caber no orçamento com o parcelamento certo.',
+        frase: '"Claro! Deixa eu ver as melhores condições disponíveis para você. Dependendo da forma de pagamento, consigo ampliar o parcelamento — qual seria a parcela ideal no seu orçamento?"'
+      }
+    ]
+  },
+  inseguranca: {
+    label: 'INSEGURANÇA',
+    icon: '😟',
+    items: [
+      {
+        text: 'Nunca viajei para fora',
+        argumento: 'A primeira viagem internacional é uma das experiências mais transformadoras da vida. O medo do desconhecido é natural, mas com planejamento profissional tudo fica muito mais simples.',
+        reposicionamento: 'Destinos ideais para a primeira viagem como Portugal (língua), Argentina (vizinho) ou Orlando (estrutura) são acolhedores e cheios de suporte para brasileiros.',
+        frase: '"Primeira viagem fora é especial! Vou montar um roteiro pensado exatamente para quem está estreando. Com tudo organizado, você vai focar só em curtir — pode confiar em mim para cuidar dos detalhes."'
+      },
+      {
+        text: 'Tenho medo de avião',
+        argumento: 'Medo de avião é mais comum do que parece — e não precisa ser um bloqueio. Com a preparação certa, muitos clientes superam esse receio e descobrem que a viagem valeu cada segundo.',
+        reposicionamento: 'Avião é estatisticamente o meio de transporte mais seguro. Voos curtos (para destinos nacionais ou vizinhos) são ótima forma de começar. Técnicas de relaxamento e conversa com a companhia aérea ajudam muito.',
+        frase: '"Entendo perfeitamente. Muitos dos meus melhores clientes tinham esse mesmo medo antes da primeira viagem. Posso sugerir destinos de voos mais curtos e algumas dicas que costumam ajudar muito. O que te parece?"'
+      },
+      {
+        text: 'E se acontecer algo lá fora?',
+        argumento: 'Imprevistos podem acontecer em qualquer lugar — inclusive aqui no Brasil. A diferença é ter um profissional ao seu lado e um seguro viagem adequado que resolva qualquer problema.',
+        reposicionamento: 'Com seguro viagem e assistência 24h, qualquer imprevisto tem solução. Cancelamento de voo, problema de saúde, extravio de bagagem — tudo coberto. Viajar sem seguro é o verdadeiro risco.',
+        frase: '"Essa preocupação é válida e mostra que você é um viajante responsável. Por isso o seguro viagem é indispensável — e garanto que vai sair daqui com total cobertura. Posso te mostrar as opções?"'
+      },
+      {
+        text: 'Não sei inglês',
+        argumento: 'Inglês não é requisito para viajar. Destinos como Portugal, Argentina, Cancún e Orlando têm atendimento em português ou são extremamente adaptados para brasileiros.',
+        reposicionamento: 'Com um guia local, aplicativos de tradução e um roteiro bem montado, a barreira do idioma praticamente desaparece. E no turismo, o "sign language" universal sempre resolve!',
+        frase: '"Não tem problema! Posso montar um roteiro com destinos onde o português é a língua oficial ou onde há muito suporte para brasileiros. E hoje os apps de tradução resolvem 90% das situações — você vai se surpreender!"'
+      }
+    ]
+  },
+  indecisao: {
+    label: 'INDECISÃO',
+    icon: '🤔',
+    items: [
+      {
+        text: 'Preciso pensar mais',
+        argumento: 'Pensar é positivo, mas sem um prazo definido a viagem nunca sai. Ajude o cliente a identificar o que falta para tomar a decisão — provavelmente é informação ou clareza.',
+        reposicionamento: 'Pergunte o que falta para decidir: é o roteiro, o preço, a data? Ao identificar o bloqueio real, você pode resolvê-lo ali mesmo e fechar.',
+        frase: '"Faz todo sentido querer ter certeza! Me conta: o que seria preciso para você se sentir seguro para fechar? Talvez eu possa resolver sua dúvida agora mesmo."'
+      },
+      {
+        text: 'Vou conversar com meu marido/esposa',
+        argumento: 'Decisão em casal é saudável. O papel do consultor é garantir que o casal tenha as informações certas para decidir juntos — e eventualmente propor uma reunião com os dois.',
+        reposicionamento: 'Ofereça um resumo da proposta para ele/ela levar, agende uma call com o casal, ou pergunte o que o cônjuge costuma valorizar numa viagem para personalizar a proposta.',
+        frase: '"Ótimo! Decisões de viagem são muito mais gostosas quando feitas a dois. Posso te mandar um resumo bonito da proposta para você mostrar? Assim fica mais fácil decidir juntos."'
+      },
+      {
+        text: 'Ainda não decidi o destino',
+        argumento: 'Falta de destino definido é uma oportunidade de ser consultor de verdade. Com as perguntas certas, você descobre o perfil e apresenta 2-3 opções personalizadas.',
+        reposicionamento: 'Use o modo "Qualificar cliente" para descobrir o perfil ideal e surpreender com sugestões que o cliente não havia considerado. Seja o especialista que ele procurava.',
+        frase: '"Perfeito — é exatamente para isso que estou aqui! Me conta um pouco: prefere praia ou cidade? Aventura ou conforto? Com essas informações, te apresento as melhores opções para o seu perfil."'
+      },
+      {
+        text: 'Talvez ano que vem',
+        argumento: 'Adiar pode parecer prudente, mas preços sobem, disponibilidade diminui e o sonho vai ficando para "depois" indefinidamente. Crie urgência com base em fatos reais.',
+        reposicionamento: 'Pesquise disponibilidade e mostre que as melhores opções para a data desejada já têm ocupação. Uma reserva com entrada mínima garante o preço e a vaga sem comprometer demais o orçamento agora.',
+        frase: '"Entendo, mas vou te contar: as melhores acomodações para a alta temporada já estão com reservas para o ano que vem. Posso verificar a disponibilidade agora — se quiser garantir, uma entrada mínima já segura sua vaga."'
+      }
+    ]
+  },
+  concorrencia: {
+    label: 'CONCORRÊNCIA',
+    icon: '🏆',
+    items: [
+      {
+        text: 'Vou pesquisar em outras agências',
+        argumento: 'Comparar é justo. Destaque o que diferencia seu atendimento: conhecimento, personalização e suporte contínuo — não apenas preço. Quem compara só preço não encontra o melhor serviço.',
+        reposicionamento: 'Convide a comparar o pacote completo: o que inclui, o nível de suporte, a experiência do consultor e o histórico de clientes satisfeitos. Preço igual — serviço diferente.',
+        frase: '"Faz todo sentido comparar! Te peço só que compare o pacote completo: o que está incluído, como é o suporte durante a viagem e o que acontece se algo der errado. Tenho certeza que nossa proposta vai se destacar."'
+      },
+      {
+        text: 'Vi mais barato num site',
+        argumento: 'Sites oferecem preço, mas não oferecem consultoria. A diferença é que um consultor cria experiências, resolve problemas e está disponível quando algo dá errado — e isso tem valor.',
+        reposicionamento: 'Mostre o valor agregado do atendimento personalizado. Ofereça comparar item a item com o que o site oferece. Na maioria das vezes, o custo total é equivalente ou maior quando somados seguro, taxas e bagagens.',
+        frase: '"Posso comparar exatamente! Me manda o link do que encontrou e vejo o que está incluído. Na maioria das vezes quando a gente coloca tudo no papel — seguro, bagagem, suporte — o valor fica muito próximo. Mas a diferença do serviço é enorme."'
+      },
+      {
+        text: 'Um amigo me indicou outra agência',
+        argumento: 'Indicação é poderosa — e você também tem as suas. Valorize a indicação do amigo, mas apresente seus diferenciais com confiança e ofereça uma proposta para comparar.',
+        reposicionamento: 'Pergunte o que o amigo valorizou nessa agência e use isso para mostrar que você também entrega — e talvez com algum diferencial adicional. Solicite uma chance de apresentar sua proposta.',
+        frase: '"Indicação de amigo é sempre um ótimo sinal! Adoro quando os clientes chegam assim. Me conta o que o seu amigo valorizou nessa agência — quero garantir que você tenha as melhores opções para comparar antes de decidir."'
+      }
+    ]
+  }
+};
+var curObjItem = null;
+
+function renderObjBase() {
+  var msgs = document.getElementById('msgs');
+  var html = '<div class="obj-grid">';
+  Object.keys(OBJECTIONS).forEach(function(cat) {
+    var c = OBJECTIONS[cat];
+    html += '<div class="obj-category"><div class="obj-cat-title">'+c.icon+' '+c.label+'</div><div class="obj-cards">';
+    c.items.forEach(function(item, i) {
+      html += '<div class="obj-card" onclick="openObjDetail(\''+cat+'\','+i+')">"'+item.text+'"</div>';
+    });
+    html += '</div></div>';
+  });
+  html += '</div>';
+  msgs.innerHTML = html;
+  wvis = false;
+}
+
+function openObjDetail(cat, idx) {
+  var item = OBJECTIONS[cat].items[idx];
+  curObjItem = item;
+  document.getElementById('obj-cat-label').textContent = OBJECTIONS[cat].icon + ' ' + OBJECTIONS[cat].label;
+  document.getElementById('obj-title').textContent = item.text;
+  var html = '';
+  html += '<div class="obj-section"><div class="obj-section-title">🎯 Argumento principal</div><div class="obj-section-body">'+item.argumento+'</div></div>';
+  html += '<div class="obj-section"><div class="obj-section-title">💎 Reposicionamento de valor</div><div class="obj-section-body">'+item.reposicionamento+'</div></div>';
+  html += '<div class="dest-section-title" style="font-size:10px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--tx3);margin-bottom:8px">💬 Frase pronta para usar</div>';
+  html += '<div class="obj-phrase">'+item.frase+'</div>';
+  document.getElementById('obj-body').innerHTML = html;
+  document.getElementById('objm').classList.add('open');
+}
+
+function closeObjDetail() { document.getElementById('objm').classList.remove('open'); }
+
+function useObjInChat() {
+  closeObjDetail();
+  setMode('objecao', false);
+  if (!wvis) { document.getElementById('msgs').innerHTML = ''; }
+  hist = [];
+  document.getElementById('ui').value = 'O cliente disse: "'+curObjItem.text+'". Me ajude a contornar essa objeção com um argumento completo e uma frase pronta para eu usar agora.';
+  send();
+}
+
+// ── MENSAGENS WHATSAPP ────────────────────────────────────────────────────────
+var MESSAGES = [
+  {
+    category: 'PRIMEIRO CONTATO',
+    icon: '👋',
+    items: [
+      {
+        name: 'Abordagem inicial com interesse',
+        body: 'Olá, [NOME]! 😊\n\nSou [AGENTE] da Dom Travel, agência de viagens consultiva.\n\nFiquei sabendo que você tem interesse em conhecer [DESTINO]! Adoraria entender melhor o que você está imaginando para essa viagem dos sonhos.\n\nQuando teria uns minutinhos para conversar?'
+      },
+      {
+        name: 'Retorno de lead/formulário',
+        body: 'Olá, [NOME]! Tudo bem? 👋\n\nVi que você solicitou informações sobre [DESTINO] — e estou aqui para ajudar!\n\nSou consultora de viagens da Dom Travel e trabalho com roteiros personalizados para cada perfil.\n\nMe conta: essa viagem seria para quando? E com quem você vai?'
+      }
+    ]
+  },
+  {
+    category: 'QUALIFICAÇÃO',
+    icon: '🎯',
+    items: [
+      {
+        name: 'Perguntas de perfil',
+        body: 'Olá, [NOME]! Para montar a proposta ideal para você, preciso de algumas informações rápidas:\n\n1️⃣ Quantas pessoas vão viajar?\n2️⃣ Qual a data de preferência? (mês/período)\n3️⃣ Há algum destino que já está no seu coração?\n4️⃣ Tem alguma preferência: praia, cidade, aventura ou cultura?\n5️⃣ Qual seria o investimento aproximado por pessoa?\n\nAssim consigo te apresentar as melhores opções! 🗺️'
+      },
+      {
+        name: 'Confirmação de orçamento',
+        body: 'Oi, [NOME]! Estou montando sua proposta com muito carinho 💛\n\nSó uma dúvida rápida: o valor de [VALOR] mencionado seria por pessoa ou o total da viagem?\n\nAssim consigo calibrar exatamente as melhores opções dentro do seu planejamento!'
+      }
+    ]
+  },
+  {
+    category: 'ENVIO DE PROPOSTA',
+    icon: '📋',
+    items: [
+      {
+        name: 'Apresentação da proposta',
+        body: 'Oi, [NOME]! Sua proposta ficou incrível 🌍✨\n\nMontei um roteiro especial para [DESTINO] com tudo que você me contou:\n\n✅ [DESTINO] — [DIAS] dias\n✅ Hospedagem selecionada para o seu perfil\n✅ Voos de [CIDADE_ORIGEM]\n✅ Seguro viagem incluído\n\n📅 Período: [DATA]\n💰 Investimento: a partir de R$ [VALOR] por pessoa\n\nMe fala o que acha! Posso ajustar qualquer detalhe 😊'
+      },
+      {
+        name: 'Follow-up de proposta enviada',
+        body: 'Oi, [NOME]! Tudo bem? 😊\n\nEnviei a proposta para [DESTINO] há alguns dias e queria saber se teve chance de dar uma olhada.\n\nTenho disponibilidade para conversar agora se quiser tirar qualquer dúvida — ou posso agendar um horário melhor para você!'
+      }
+    ]
+  },
+  {
+    category: 'FOLLOW-UP',
+    icon: '🔄',
+    items: [
+      {
+        name: 'Follow-up suave (sem resposta)',
+        body: 'Oi, [NOME]! Espero que esteja tudo bem por aí 😊\n\nPassei para saber se surgiu alguma dúvida sobre a proposta de [DESTINO] que enviei.\n\nEstou à disposição para ajustar qualquer detalhe ou explorar outras opções — é só falar!'
+      },
+      {
+        name: 'Follow-up com urgência real',
+        body: 'Oi, [NOME]! Precisei te avisar de algo importante 🚨\n\nVerifiquei as acomodações do seu roteiro para [DESTINO] e a disponibilidade para [DATA] está diminuindo bastante.\n\nNão queria que você perdesse essa opção! Posso reservar com uma entrada mínima para garantir sua vaga — quer que eu verifique os valores?'
+      },
+      {
+        name: 'Follow-up com novidade/oferta',
+        body: 'Oi, [NOME]! Tenho uma novidade que acho que você vai adorar! 🎁\n\nSurgiu uma condição especial para [DESTINO] válida até [DATA] — com [BENEFICIO].\n\nLembrei logo de você! Quer que eu monte uma proposta atualizada com essa promoção?'
+      }
+    ]
+  },
+  {
+    category: 'FECHAMENTO',
+    icon: '✅',
+    items: [
+      {
+        name: 'Resumo e convite para fechar',
+        body: 'Oi, [NOME]! Resumindo tudo que conversamos 💛\n\n🌍 Destino: [DESTINO]\n📅 Período: [DATA]\n👥 Viajantes: [NUMERO]\n💰 Investimento: R$ [VALOR] por pessoa\n✈️ Inclui: voos, hospedagem e seguro viagem\n\nPara garantir essa proposta e os preços atuais, preciso da sua confirmação até [PRAZO].\n\nO que falta para você tomar essa decisão? 😊'
+      },
+      {
+        name: 'Instruções de pagamento/reserva',
+        body: 'Boa notícia, [NOME]! 🎉\n\nVou garantir sua reserva em [DESTINO] agora!\n\nPara confirmar, precisamos de:\n1️⃣ Dados dos viajantes (nome completo + CPF)\n2️⃣ Entrada de R$ [VALOR_ENTRADA]\n\nAssim que confirmar, já entro em contato com todos os detalhes do próximo passo.\n\nPreparada para essa aventura? ✈️'
+      }
+    ]
+  },
+  {
+    category: 'PÓS-VENDA',
+    icon: '⭐',
+    items: [
+      {
+        name: 'Check-in antes da viagem',
+        body: 'Oi, [NOME]! A viagem dos sonhos está chegando 🎊\n\nFaltam [DIAS] dias para você embarcar para [DESTINO]!\n\nSó queria checar se está tudo pronto:\n✅ Documentos separados\n✅ Seguro viagem em mãos\n✅ Reservas confirmadas\n\nQualquer dúvida ou perrengue, me chama — estou aqui! Boa viagem! ✈️❤️'
+      },
+      {
+        name: 'Pós-retorno e pedido de avaliação',
+        body: 'Oi, [NOME]! Bem-vindo(a) de volta! 🥳\n\nEspero que [DESTINO] tenha sido tudo que você sonhou — e mais!\n\nFicaria muito feliz de ouvir como foi. E se a experiência foi boa, uma avaliação no Google nos ajuda muito a continuar levando outros clientes para essas aventuras incríveis 💛\n\nConta tudo! E já pensando na próxima? 😉'
+      }
+    ]
+  }
+];
+
+function renderWhatsapp() {
+  var msgs = document.getElementById('msgs');
+  var html = '<div class="msg-grid">';
+  MESSAGES.forEach(function(cat) {
+    html += '<div class="msg-category"><div class="msg-cat-title">'+cat.icon+' '+cat.category+'</div>';
+    cat.items.forEach(function(item, i) {
+      var catIdx = MESSAGES.indexOf(cat);
+      var rawBody = item.body;
+      var displayBody = rawBody.replace(/\[([^\]]+)\]/g, '<span class="msg-var">[$1]</span>');
+      var escapedBody = rawBody.replace(/"/g,'&quot;');
+      html += '<div class="msg-card">';
+      html += '<div class="msg-card-name">'+item.name+'</div>';
+      html += '<div class="msg-body">'+displayBody+'</div>';
+      html += '<div class="msg-actions">';
+      html += '<button class="msg-copy-btn" onclick="copyMsg(this)" data-body="'+escapedBody+'"><svg viewBox="0 0 24 24" style="width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar mensagem</button>';
+      html += '<button class="msg-ai-btn" onclick="personalizeMsg('+catIdx+','+i+')">✨ Personalizar com IA</button>';
+      html += '</div></div>';
+    });
+    html += '</div>';
+  });
+  html += '</div>';
+  msgs.innerHTML = html;
+  wvis = false;
+}
+
+function copyMsg(btn) {
+  var body = btn.getAttribute('data-body');
+  navigator.clipboard.writeText(body).then(function() {
+    var orig = btn.innerHTML;
+    btn.textContent = 'Copiado!';
+    setTimeout(function() { btn.innerHTML = orig; }, 2000);
+  });
+}
+
+function personalizeMsg(catIdx, itemIdx) {
+  var item = MESSAGES[catIdx].items[itemIdx];
+  var cat = MESSAGES[catIdx].category;
+  setMode('mensagem', false);
+  hist = [];
+  if (!wvis) { document.getElementById('msgs').innerHTML = ''; wvis = true; }
+  document.getElementById('ui').value = 'Tenho este template de mensagem WhatsApp para "'+cat+'":\n\n'+item.body+'\n\nMe ajude a personalizar esta mensagem de forma mais consultiva, calorosa e persuasiva, mantendo as variáveis [NOME], [DESTINO] e demais campos. Mostre a versão original e a versão melhorada, explicando o que mudou.';
+  send();
 }
 
 // ── PDF ──────────────────────────────────────────────────────────────────────
