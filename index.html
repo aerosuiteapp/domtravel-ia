@@ -199,6 +199,61 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--tx);min-hei
 .msg-copy-btn:hover{background:var(--bg3);color:var(--tx)}
 .msg-ai-btn{display:flex;align-items:center;gap:5px;padding:7px 14px;border:1px solid rgba(255,204,41,0.25);border-radius:var(--rx);background:rgba(255,204,41,0.08);font-size:12px;color:var(--am);cursor:pointer;font-family:'Inter',sans-serif;transition:background .15s}
 .msg-ai-btn:hover{background:rgba(255,204,41,0.18)}
+
+/* CALCULADORA */
+.calc-wrap{padding:24px;max-width:680px;margin:0 auto;width:100%}
+.calc-title{font-family:'Syne',sans-serif;font-size:18px;font-weight:700;color:var(--tx);margin-bottom:4px}
+.calc-sub{font-size:13px;color:var(--tx2);margin-bottom:20px}
+.calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px}
+.calc-field{display:flex;flex-direction:column;gap:5px}
+.calc-field.full{grid-column:1/-1}
+.calc-label{font-size:11px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:var(--tx3)}
+.calc-inp{background:var(--bg3);border:1px solid var(--b2);border-radius:var(--rx);padding:10px 12px;font-family:'Inter',sans-serif;font-size:14px;color:var(--tx);outline:none;transition:border-color .2s;width:100%}
+.calc-inp:focus{border-color:var(--am)}
+.calc-results{background:var(--bg2);border:1px solid var(--b2);border-radius:var(--rs);padding:16px;margin-bottom:16px}
+.calc-results-title{font-size:10px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--tx3);margin-bottom:12px}
+.calc-result-row{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid var(--b1)}
+.calc-result-row:last-child{border-bottom:none;margin-top:4px;padding-top:10px}
+.calc-result-label{font-size:13px;color:var(--tx2)}
+.calc-result-val{font-size:14px;font-weight:500;color:var(--tx)}
+.calc-result-val.highlight{font-family:'Syne',sans-serif;font-size:18px;font-weight:700;color:var(--am)}
+.calc-actions{display:flex;gap:10px}
+.calc-btn{flex:1;padding:11px;border:none;border-radius:var(--rx);font-family:'Syne',sans-serif;font-size:13px;font-weight:700;cursor:pointer;transition:background .15s}
+.calc-btn.primary{background:var(--am);color:var(--pr)}
+.calc-btn.primary:hover{background:var(--am-d)}
+.calc-btn.secondary{background:var(--bg3);color:var(--tx);border:1px solid var(--b2)}
+.calc-btn.secondary:hover{background:var(--bg4)}
+
+/* MÉTRICAS */
+.met-wrap{padding:24px;max-width:820px;margin:0 auto;width:100%}
+.met-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px;margin-bottom:24px}
+.met-card{background:var(--bg2);border:1px solid var(--b2);border-radius:var(--rs);padding:16px}
+.met-card-val{font-family:'Syne',sans-serif;font-size:28px;font-weight:700;color:var(--am);margin-bottom:4px}
+.met-card-label{font-size:11px;color:var(--tx3);text-transform:uppercase;letter-spacing:.07em}
+.met-section{margin-bottom:20px}
+.met-section-title{font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--am);margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid rgba(255,204,41,0.2)}
+.met-bar-row{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.met-bar-label{font-size:12px;color:var(--tx2);width:120px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.met-bar-track{flex:1;background:var(--bg3);border-radius:4px;height:8px;overflow:hidden}
+.met-bar-fill{background:var(--am);height:100%;border-radius:4px;transition:width .3s}
+.met-bar-count{font-size:11px;color:var(--tx3);width:30px;text-align:right;flex-shrink:0}
+.met-reset-btn{padding:8px 18px;border:1px solid var(--b2);border-radius:var(--rx);background:none;font-size:12px;color:var(--tx2);cursor:pointer;font-family:'Inter',sans-serif}
+.met-reset-btn:hover{background:var(--bg3);color:var(--tx)}
+
+/* DOCUMENTOS */
+.docs-wrap{padding:24px;max-width:820px;margin:0 auto;width:100%}
+.docs-section{margin-bottom:24px}
+.docs-section-title{font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--am);margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid rgba(255,204,41,0.2)}
+.docs-card{background:var(--bg2);border:1px solid var(--b2);border-radius:var(--rs);padding:16px;margin-bottom:10px}
+.docs-card-title{font-size:14px;font-weight:500;color:var(--tx);margin-bottom:6px}
+.docs-card-desc{font-size:12.5px;color:var(--tx2);line-height:1.65;margin-bottom:10px}
+.docs-reqs{display:flex;flex-direction:column;gap:4px;margin-bottom:12px}
+.docs-req{font-size:12px;color:var(--tx2);line-height:1.5}
+.docs-card-actions{display:flex;gap:8px}
+.docs-btn-primary{display:flex;align-items:center;gap:5px;padding:7px 14px;border:none;border-radius:var(--rx);background:var(--am);font-size:12px;color:var(--pr);font-weight:600;cursor:pointer;font-family:'Inter',sans-serif}
+.docs-btn-secondary{display:flex;align-items:center;gap:5px;padding:7px 14px;border:1px solid var(--b2);border-radius:var(--rx);background:none;font-size:12px;color:var(--tx2);cursor:pointer;font-family:'Inter',sans-serif}
+.docs-btn-secondary:hover{background:var(--bg3);color:var(--tx)}
+.docs-flag{font-size:16px;margin-right:4px}
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
@@ -253,6 +308,9 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--tx);min-hei
         <button class="mb" id="m-qualificar" onclick="setMode('qualificar')"><div class="mi">🎯</div><div><div class="mn">Qualificar cliente</div><div class="md">Entrevista guiada</div></div></button>
         <button class="mb" id="m-objbase" onclick="setMode('objbase')"><div class="mi">🛡️</div><div><div class="mn">Objeções</div><div class="md">Base de respostas</div></div></button>
         <button class="mb" id="m-whatsapp" onclick="setMode('whatsapp')"><div class="mi">💬</div><div><div class="mn">Mensagens</div><div class="md">Templates WhatsApp</div></div></button>
+        <button class="mb" id="m-calc" onclick="setMode('calc')"><div class="mi">🧮</div><div><div class="mn">Calculadora</div><div class="md">Orçamento de pacotes</div></div></button>
+        <button class="mb" id="m-metricas" onclick="setMode('metricas')" style="display:none"><div class="mi">📊</div><div><div class="mn">Métricas</div><div class="md">Dashboard de uso</div></div></button>
+        <button class="mb" id="m-docs" onclick="setMode('docs')"><div class="mi">📋</div><div><div class="mn">Documentos</div><div class="md">Guias e formulários</div></div></button>
       </div>
       <div class="ss" id="hist-section" style="display:none">
         <div class="ssl">Histórico</div>
@@ -312,6 +370,8 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--tx);min-hei
     <p class="ms2">Insira sua chave da Anthropic. Fica salva só neste navegador.</p>
     <label class="ml2" for="aik">Chave da API</label>
     <input class="minp" type="password" id="aik" placeholder="sk-ant-api03-...">
+    <label class="ml2">Número WhatsApp da agência</label>
+    <input class="minp" type="text" id="wa-num" placeholder="5517999999999 (sem + ou espaços)">
     <div class="mnote">
       📌 <a href="https://console.anthropic.com" target="_blank">console.anthropic.com</a> → Login → <strong>API Keys → Create Key</strong>
     </div>
@@ -381,6 +441,41 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--tx);min-hei
   </div>
 </div>
 
+<!-- MODAL MENOR DESACOMPANHADO -->
+<div class="mo" id="menorm">
+  <div class="md2" style="max-width:500px;max-height:85vh;overflow-y:auto">
+    <div class="mhd">
+      <h2 class="mt2">Autorização - Menor Desacompanhado</h2>
+      <button class="mc3" onclick="closeMenor()"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    </div>
+    <p class="ms2">Preencha os dados para gerar a autorização de viagem do menor.</p>
+    <label class="ml2">Nome completo do menor</label>
+    <input class="minp" type="text" id="men-nome" placeholder="Nome completo">
+    <label class="ml2">Data de nascimento</label>
+    <input class="minp" type="date" id="men-nasc">
+    <label class="ml2">Nome do pai</label>
+    <input class="minp" type="text" id="men-pai-nome" placeholder="Nome completo do pai">
+    <label class="ml2">CPF do pai</label>
+    <input class="minp" type="text" id="men-pai-cpf" placeholder="000.000.000-00">
+    <label class="ml2">Nome da mãe</label>
+    <input class="minp" type="text" id="men-mae-nome" placeholder="Nome completo da mãe">
+    <label class="ml2">CPF da mãe</label>
+    <input class="minp" type="text" id="men-mae-cpf" placeholder="000.000.000-00">
+    <label class="ml2">Destino da viagem</label>
+    <input class="minp" type="text" id="men-destino" placeholder="Ex: Orlando, EUA">
+    <label class="ml2">Data de ida</label>
+    <input class="minp" type="date" id="men-ida">
+    <label class="ml2">Data de volta</label>
+    <input class="minp" type="date" id="men-volta">
+    <label class="ml2">Acompanhante (se houver)</label>
+    <input class="minp" type="text" id="men-acomp" placeholder="Nome do acompanhante (opcional)">
+    <div class="mbs">
+      <button class="bgb" onclick="closeMenor()">Cancelar</button>
+      <button class="bcb" onclick="gerarPdfMenor()">📄 Gerar PDF</button>
+    </div>
+  </div>
+</div>
+
 <script>
 var USERS = [{"email": "danilocosta@domtravel.com.br", "senha": "Danilo@2025", "nome": "Danilo", "role": "admin"}, {"email": "andreiavieira@domtravel.com.br", "senha": "DomTravel@2025", "nome": "Andreia", "role": "agent"}, {"email": "thamyresmota@domtravel.com.br", "senha": "DomTravel@2025", "nome": "Thamyres", "role": "agent"}, {"email": "financeiro@domtravel.com.br", "senha": "DomTravel@2025", "nome": "Financeiro", "role": "agent"}, {"email": "nataliacosta@domtravel.com.br", "senha": "DomTravel@2025", "nome": "Natalia", "role": "agent"}, {"email": "thiagosimoes@domtravel.com.br", "senha": "DomTravel@2025", "nome": "Thiago", "role": "agent"}];
 var LP_B64 = 'data:image/png;base64,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';
@@ -405,7 +500,10 @@ var MM = {
   biblioteca: {i:'🌍',n:'Biblioteca',d:'Cards de destinos'},
   qualificar: {i:'🎯',n:'Qualificar cliente',d:'Entrevista guiada'},
   objbase:    {i:'🛡️',n:'Objeções',d:'Base de respostas'},
-  whatsapp:   {i:'💬',n:'Mensagens',d:'Templates WhatsApp'}
+  whatsapp:   {i:'💬',n:'Mensagens',d:'Templates WhatsApp'},
+  calc:       {i:'🧮',n:'Calculadora',d:'Orçamento de pacotes'},
+  metricas:   {i:'📊',n:'Métricas',d:'Dashboard de uso'},
+  docs:       {i:'📋',n:'Documentos',d:'Guias e formulários'}
 };
 var hist=[], key='', busy=false, mode='geral', wvis=true, curUser=null;
 
@@ -445,6 +543,7 @@ function doLogin() {
     document.getElementById('uemail').textContent = user.email;
     document.getElementById('uavatar').textContent = user.nome.charAt(0).toUpperCase();
     document.getElementById('wh').textContent = 'Ola, ' + user.nome + '!';
+    if(document.getElementById('m-metricas')) document.getElementById('m-metricas').style.display = user.role==='admin' ? 'flex' : 'none';
     loadKey(); loadHistory(); document.getElementById('ui').focus();
   } else {
     var err = document.getElementById('lerr');
@@ -482,10 +581,10 @@ function savePwd() {
   alert('Senha alterada com sucesso!');
 }
 
-function loadKey() { var s=localStorage.getItem('dt_k5'); if(s){ key=s; setSt(true); } }
-function openCfg() { document.getElementById('aik').value=key||''; document.getElementById('cfgm').classList.add('open'); }
+function loadKey() { var s=localStorage.getItem('dt_k5'); if(s){ key=s; setSt(true); } var waN=localStorage.getItem('dt_wa_num'); if(waN&&document.getElementById('wa-num')) document.getElementById('wa-num').value=waN; }
+function openCfg() { document.getElementById('aik').value=key||''; var waN=localStorage.getItem('dt_wa_num')||''; if(document.getElementById('wa-num')) document.getElementById('wa-num').value=waN; document.getElementById('cfgm').classList.add('open'); }
 function closeCfg() { document.getElementById('cfgm').classList.remove('open'); }
-function saveCfg() { var v=document.getElementById('aik').value.trim(); if(!v)return; key=v; localStorage.setItem('dt_k5',v); setSt(true); closeCfg(); }
+function saveCfg() { var v=document.getElementById('aik').value.trim(); if(!v)return; key=v; localStorage.setItem('dt_k5',v); setSt(true); var waN=document.getElementById('wa-num')?document.getElementById('wa-num').value.trim():''; if(waN) localStorage.setItem('dt_wa_num',waN); closeCfg(); }
 function setSt(ok) { document.getElementById('adot').className='adot '+(ok?'ok':'err'); document.getElementById('albl').textContent=ok?'API ativa':'API nao configurada'; }
 
 function setMode(m, cl) {
@@ -504,6 +603,9 @@ function setMode(m, cl) {
   if (m === 'biblioteca') { renderBiblioteca(); return; }
   if (m === 'objbase') { renderObjBase(); return; }
   if (m === 'whatsapp') { renderWhatsapp(); return; }
+  if (m === 'calc') { renderCalc(); return; }
+  if (m === 'metricas') { renderMetricas(); return; }
+  if (m === 'docs') { renderDocs(); return; }
   if(!wvis) showW();
   if (m === 'qualificar' && cl) {
     setTimeout(function(){
@@ -546,7 +648,8 @@ function addMsg(role, text) {
   var qt=text.replace(/"/g,'&quot;');
   var copyLbl=(role==='ai'&&mode==='qualificar')?'Copiar perfil':'Copiar';
   var pdfBt=role==='ai'&&mode==='roteiro'?'<button class="pdf-btn" onclick="askPdfClient(this)" data-t="'+qt+'"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>Gerar PDF</button>':'';
-  var ac=role==='ai'?'<div class="ba"><button class="bab" onclick="cp(this)" data-t="'+qt+'"><svg viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>'+copyLbl+'</button>'+pdfBt+'</div>':'';
+  var waBt=role==='ai'?'<button class="bab" onclick="sendWA(this)" data-t="'+qt+'" title="Enviar via WhatsApp"><svg viewBox="0 0 24 24" style="width:11px;height:11px;fill:currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>WhatsApp</button>':'';
+  var ac=role==='ai'?'<div class="ba"><button class="bab" onclick="cp(this)" data-t="'+qt+'"><svg viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>'+copyLbl+'</button>'+waBt+pdfBt+'</div>':'';
   row.innerHTML=av+'<div class="mc2">'+nm+'<div class="bb">'+ft+'</div>'+ac+'</div>';
   msgs.appendChild(row);
   document.getElementById('cc').scrollTop=99999;
@@ -575,6 +678,7 @@ async function send() {
   var txt=inp.value.trim(); if(!txt) return;
   inp.value=''; inp.style.height='auto';
   addMsg('user',txt); hist.push({role:'user',content:txt});
+  trackMetric('byMode', mode); trackMetric('byUser', curUser?curUser.nome:'?'); trackMetric('byDay', new Date().toISOString().slice(0,10));
   busy=true; document.getElementById('sb').disabled=true; showT();
   try {
     var r=await fetch('https://api.anthropic.com/v1/messages',{
@@ -631,6 +735,7 @@ function renderBiblioteca() {
 function openDestino(key) {
   curDestKey = key;
   var d = DESTINATIONS[key];
+  trackMetric('byDestino', d.name);
   document.getElementById('dest-emoji').textContent = d.emoji;
   document.getElementById('dest-title').textContent = d.name + ' — ' + d.sub;
   var html = '';
@@ -837,6 +942,7 @@ function renderObjBase() {
 function openObjDetail(cat, idx) {
   var item = OBJECTIONS[cat].items[idx];
   curObjItem = item;
+  trackMetric('byObjection', item.text);
   document.getElementById('obj-cat-label').textContent = OBJECTIONS[cat].icon + ' ' + OBJECTIONS[cat].label;
   document.getElementById('obj-title').textContent = item.text;
   var html = '';
@@ -978,6 +1084,8 @@ function renderWhatsapp() {
 
 function copyMsg(btn) {
   var body = btn.getAttribute('data-body');
+  var name = btn.closest('.msg-card') ? (btn.closest('.msg-card').querySelector('.msg-card-name')||{textContent:''}).textContent : '';
+  if(name) trackMetric('byMsgCopy', name);
   navigator.clipboard.writeText(body).then(function() {
     var orig = btn.innerHTML;
     btn.textContent = 'Copiado!';
@@ -1041,6 +1149,354 @@ function generatePDF(text, clientName) {
     doc.text('Pág '+p+'/'+pages, W-mg, H-6, {align:'right'});
   }
   doc.save('roteiro-domtravel.pdf');
+}
+
+// ── WHATSAPP SEND ─────────────────────────────────────────────────────────────
+function sendWA(btn) {
+  var text = btn.getAttribute('data-t');
+  var waNum = localStorage.getItem('dt_wa_num') || '551733532026';
+  var encoded = encodeURIComponent(text);
+  window.open('https://wa.me/' + waNum + '?text=' + encoded, '_blank');
+}
+
+// ── MÉTRICAS ──────────────────────────────────────────────────────────────────
+function getMetrics() {
+  try { return JSON.parse(localStorage.getItem('dt_metrics')) || {}; } catch(e) { return {}; }
+}
+function saveMetrics(m) { localStorage.setItem('dt_metrics', JSON.stringify(m)); }
+function trackMetric(category, key) {
+  var m = getMetrics();
+  if (!m[category]) m[category] = {};
+  m[category][key] = (m[category][key] || 0) + 1;
+  saveMetrics(m);
+}
+
+function renderMetricas() {
+  var m = getMetrics();
+  var msgs = document.getElementById('msgs');
+  var today = new Date().toISOString().slice(0,10);
+  var todayCount = (m.byDay && m.byDay[today]) || 0;
+  var weekCount = 0;
+  if (m.byDay) {
+    var now = new Date();
+    for (var i=0; i<7; i++) {
+      var d = new Date(now); d.setDate(d.getDate()-i);
+      var dk = d.toISOString().slice(0,10);
+      weekCount += (m.byDay[dk] || 0);
+    }
+  }
+  function topKey(obj) { if(!obj) return '—'; var k=Object.keys(obj); if(!k.length) return '—'; k.sort(function(a,b){return obj[b]-obj[a];}); return k[0]; }
+  var modoTop = topKey(m.byMode);
+  var agenteTop = topKey(m.byUser);
+
+  function barRows(obj, limit) {
+    if (!obj || !Object.keys(obj).length) return '<div style="font-size:12px;color:var(--tx3)">Sem dados ainda.</div>';
+    var keys = Object.keys(obj).sort(function(a,b){return obj[b]-obj[a];}).slice(0, limit||5);
+    var max = obj[keys[0]] || 1;
+    return keys.map(function(k) {
+      var pct = Math.round((obj[k]/max)*100);
+      return '<div class="met-bar-row"><div class="met-bar-label" title="'+k+'">'+k+'</div><div class="met-bar-track"><div class="met-bar-fill" style="width:'+pct+'%"></div></div><div class="met-bar-count">'+obj[k]+'</div></div>';
+    }).join('');
+  }
+
+  var last7 = [];
+  for (var i=6; i>=0; i--) {
+    var dd = new Date(); dd.setDate(dd.getDate()-i);
+    var dkey = dd.toISOString().slice(0,10);
+    var dlbl = dd.toLocaleDateString('pt-BR',{weekday:'short',day:'2-digit'});
+    last7.push({label:dlbl, count:(m.byDay&&m.byDay[dkey])||0});
+  }
+  var maxDay = Math.max.apply(null, last7.map(function(x){return x.count;})) || 1;
+  var dayBars = last7.map(function(x) {
+    var pct = Math.round((x.count/maxDay)*100);
+    return '<div class="met-bar-row"><div class="met-bar-label">'+x.label+'</div><div class="met-bar-track"><div class="met-bar-fill" style="width:'+pct+'%"></div></div><div class="met-bar-count">'+x.count+'</div></div>';
+  }).join('');
+
+  var html = '<div class="met-wrap">';
+  html += '<div class="calc-title" style="margin-bottom:4px">📊 Painel de Métricas</div>';
+  html += '<div class="calc-sub">Uso do assistente pela equipe Dom Travel</div>';
+  html += '<div class="met-cards">';
+  html += '<div class="met-card"><div class="met-card-val">'+todayCount+'</div><div class="met-card-label">Envios hoje</div></div>';
+  html += '<div class="met-card"><div class="met-card-val">'+weekCount+'</div><div class="met-card-label">Envios na semana</div></div>';
+  html += '<div class="met-card"><div class="met-card-val" style="font-size:18px">'+modoTop+'</div><div class="met-card-label">Modo mais usado</div></div>';
+  html += '<div class="met-card"><div class="met-card-val" style="font-size:18px">'+agenteTop+'</div><div class="met-card-label">Agente mais ativo</div></div>';
+  html += '</div>';
+  html += '<div class="met-section"><div class="met-section-title">🌍 Top destinos pesquisados</div>'+barRows(m.byDestino, 5)+'</div>';
+  html += '<div class="met-section"><div class="met-section-title">🛡️ Top objeções mais clicadas</div>'+barRows(m.byObjection, 5)+'</div>';
+  html += '<div class="met-section"><div class="met-section-title">📅 Atividade — últimos 7 dias</div>'+dayBars+'</div>';
+  html += '<div class="met-section"><div class="met-section-title">👥 Uso por agente</div>'+barRows(m.byUser, 10)+'</div>';
+  html += '<button class="met-reset-btn" onclick="resetMetrics()">Zerar métricas</button>';
+  html += '</div>';
+  msgs.innerHTML = html;
+  wvis = false;
+}
+
+function resetMetrics() {
+  if (confirm('Tem certeza que quer zerar todas as métricas?')) {
+    localStorage.removeItem('dt_metrics');
+    renderMetricas();
+  }
+}
+
+// ── CALCULADORA ───────────────────────────────────────────────────────────────
+function renderCalc() {
+  var msgs = document.getElementById('msgs');
+  var html = '<div class="calc-wrap">';
+  html += '<div class="calc-title">🧮 Calculadora de Pacotes</div>';
+  html += '<div class="calc-sub">Calcule o preço de venda com margem de lucro automaticamente</div>';
+  html += '<div class="calc-grid">';
+  html += '<div class="calc-field full"><label class="calc-label">Nome do cliente</label><input class="calc-inp" type="text" id="cl-nome" placeholder="Nome do cliente"></div>';
+  html += '<div class="calc-field full"><label class="calc-label">Destino</label><input class="calc-inp" type="text" id="cl-dest" placeholder="Ex: Cancún, México"></div>';
+  html += '<div class="calc-field"><label class="calc-label">Nº de passageiros</label><input class="calc-inp" type="number" id="cl-pax" min="1" value="1" oninput="calcOrc()"></div>';
+  html += '<div class="calc-field"><label class="calc-label">Margem de lucro (%)</label><input class="calc-inp" type="number" id="cl-margem" value="20" oninput="calcOrc()"></div>';
+  html += '<div class="calc-field"><label class="calc-label">Valor do aéreo (R$)</label><input class="calc-inp" type="number" id="cl-aereo" placeholder="0" oninput="calcOrc()"></div>';
+  html += '<div class="calc-field"><label class="calc-label">Valor do hotel total (R$)</label><input class="calc-inp" type="number" id="cl-hotel" placeholder="0" oninput="calcOrc()"></div>';
+  html += '<div class="calc-field"><label class="calc-label">Transfer ida+volta (R$)</label><input class="calc-inp" type="number" id="cl-transfer" placeholder="0" oninput="calcOrc()"></div>';
+  html += '<div class="calc-field"><label class="calc-label">Seguro viagem (R$)</label><input class="calc-inp" type="number" id="cl-seguro" placeholder="0" oninput="calcOrc()"></div>';
+  html += '<div class="calc-field"><label class="calc-label">Outros custos (R$)</label><input class="calc-inp" type="number" id="cl-outros" placeholder="0" oninput="calcOrc()"></div>';
+  html += '</div>';
+  html += '<div class="calc-results">';
+  html += '<div class="calc-results-title">RESULTADO DO ORÇAMENTO</div>';
+  html += '<div class="calc-result-row"><span class="calc-result-label">Custo total</span><span class="calc-result-val" id="res-custo">R$ 0,00</span></div>';
+  html += '<div class="calc-result-row"><span class="calc-result-label">Valor com margem</span><span class="calc-result-val" id="res-margem">R$ 0,00</span></div>';
+  html += '<div class="calc-result-row"><span class="calc-result-label">Valor por pessoa</span><span class="calc-result-val" id="res-pessoa">R$ 0,00</span></div>';
+  html += '<div class="calc-result-row"><span class="calc-result-label">Sugestão preço de venda</span><span class="calc-result-val highlight" id="res-venda">R$ 0,00</span></div>';
+  html += '</div>';
+  html += '<div class="calc-actions">';
+  html += '<button class="calc-btn secondary" onclick="copiarOrcamento()">📋 Copiar orçamento</button>';
+  html += '<button class="calc-btn primary" onclick="pedirIaCalc()">🤖 Pedir ajuda à IA</button>';
+  html += '</div>';
+  html += '</div>';
+  msgs.innerHTML = html;
+  wvis = false;
+}
+
+function fmtBrl(v) {
+  return 'R$ ' + v.toLocaleString('pt-BR', {minimumFractionDigits:2, maximumFractionDigits:2});
+}
+
+function calcOrc() {
+  var aereo = parseFloat(document.getElementById('cl-aereo').value) || 0;
+  var hotel = parseFloat(document.getElementById('cl-hotel').value) || 0;
+  var transfer = parseFloat(document.getElementById('cl-transfer').value) || 0;
+  var seguro = parseFloat(document.getElementById('cl-seguro').value) || 0;
+  var outros = parseFloat(document.getElementById('cl-outros').value) || 0;
+  var pax = parseInt(document.getElementById('cl-pax').value) || 1;
+  var margem = parseFloat(document.getElementById('cl-margem').value) || 20;
+  var custo = aereo + hotel + transfer + seguro + outros;
+  var comMargem = margem >= 100 ? custo : custo / (1 - margem/100);
+  var porPessoa = pax > 0 ? comMargem / pax : comMargem;
+  var sugestao = Math.ceil(porPessoa / 10) * 10;
+  document.getElementById('res-custo').textContent = fmtBrl(custo);
+  document.getElementById('res-margem').textContent = fmtBrl(comMargem);
+  document.getElementById('res-pessoa').textContent = fmtBrl(porPessoa);
+  document.getElementById('res-venda').textContent = fmtBrl(sugestao);
+}
+
+function copiarOrcamento() {
+  var nome = document.getElementById('cl-nome').value || 'Cliente';
+  var dest = document.getElementById('cl-dest').value || 'Destino';
+  var pax = document.getElementById('cl-pax').value || '1';
+  var custo = document.getElementById('res-custo').textContent;
+  var margem = document.getElementById('cl-margem').value || '20';
+  var porPessoa = document.getElementById('res-venda').textContent;
+  var txt = '✈️ ORÇAMENTO DOM TRAVEL\n\n';
+  txt += 'Cliente: ' + nome + '\n';
+  txt += 'Destino: ' + dest + '\n';
+  txt += 'Passageiros: ' + pax + '\n\n';
+  txt += '💰 Custo base: ' + custo + '\n';
+  txt += '📊 Margem: ' + margem + '%\n';
+  txt += '👤 Valor por pessoa: ' + porPessoa + '\n\n';
+  txt += 'Para mais informações, entre em contato com a Dom Travel! 🌍';
+  navigator.clipboard.writeText(txt).then(function(){ alert('Orçamento copiado!'); });
+}
+
+function pedirIaCalc() {
+  var nome = document.getElementById('cl-nome').value || 'Cliente';
+  var dest = document.getElementById('cl-dest').value || 'destino não informado';
+  var pax = document.getElementById('cl-pax').value || '1';
+  var custo = document.getElementById('res-custo').textContent;
+  var margem = document.getElementById('cl-margem').value || '20';
+  var venda = document.getElementById('res-venda').textContent;
+  var aereo = document.getElementById('cl-aereo').value || '0';
+  var hotel = document.getElementById('cl-hotel').value || '0';
+  var msg = 'Tenho um orçamento para o cliente '+nome+' para '+dest+' ('+pax+' passageiros):\n';
+  msg += '- Aéreo: R$ '+aereo+'\n- Hotel: R$ '+hotel+'\n- Custo total: '+custo+'\n- Margem: '+margem+'%\n- Preço por pessoa sugerido: '+venda+'\n\n';
+  msg += 'Me ajude com argumentos de venda para apresentar esse orçamento ao cliente e estratégias para fechar a venda.';
+  setMode('venda', false);
+  hist = [];
+  if (!wvis) { document.getElementById('msgs').innerHTML = ''; wvis = true; }
+  document.getElementById('ui').value = msg;
+  send();
+}
+
+// ── DOCUMENTOS ────────────────────────────────────────────────────────────────
+function renderDocs() {
+  var msgs = document.getElementById('msgs');
+  var html = '<div class="docs-wrap">';
+  html += '<div class="calc-title" style="margin-bottom:4px">📋 Documentos de Viagem</div>';
+  html += '<div class="calc-sub">Guias, exigências e formulários para seus clientes</div>';
+
+  html += '<div class="docs-section"><div class="docs-section-title">👶 MENOR DESACOMPANHADO</div>';
+  html += '<div class="docs-card">';
+  html += '<div class="docs-card-title">Autorização de Viagem — Resolução CNJ 295/2019</div>';
+  html += '<div class="docs-card-desc">Crianças e adolescentes viajando sem ambos os pais precisam de autorização judicial ou dos pais. Entenda as regras e gere o documento para seu cliente.</div>';
+  html += '<div class="docs-reqs">';
+  html += '<div class="docs-req">✅ Autorização dos dois pais ou responsáveis legais</div>';
+  html += '<div class="docs-req">✅ Reconhecimento de firma em cartório</div>';
+  html += '<div class="docs-req">✅ Cópia dos documentos dos pais</div>';
+  html += '<div class="docs-req">❌ Não obrigatório para viagens com ambos os pais</div>';
+  html += '</div>';
+  html += '<div class="docs-card-actions"><button class="docs-btn-primary" onclick="openMenor()">📝 Preencher formulário</button></div>';
+  html += '</div></div>';
+
+  html += '<div class="docs-section"><div class="docs-section-title">🌍 DOCUMENTAÇÃO INTERNACIONAL</div>';
+  var destDocs = [
+    {flag:'🇺🇸', dest:'Estados Unidos (EUA)', reqs:['Passaporte válido por ao menos 6 meses','Visto B1/B2 ou autorização ESTA (US$ 21)','Comprovante financeiro e reservas']},
+    {flag:'🇪🇺', dest:'Europa Schengen', reqs:['Passaporte válido por ao menos 3 meses além da viagem','Visto Schengen com comprovação financeira','Seguro viagem obrigatório (mínimo USD 30.000)']},
+    {flag:'🇵🇹', dest:'Portugal', reqs:['Passaporte válido','Sem visto para turismo (até 90 dias)','Acesso a todos os países Schengen']},
+    {flag:'🇲🇽', dest:'Cancún / México', reqs:['Passaporte válido','FMM — taxa turismo (paga na chegada)','Sem visto para brasileiros']},
+    {flag:'🇲🇻', dest:'Maldivas', reqs:['Passaporte válido','Visto concedido na chegada (gratuito, 30 dias)','Comprovante de hospedagem e retorno']}
+  ];
+  destDocs.forEach(function(d) {
+    html += '<div class="docs-card">';
+    html += '<div class="docs-card-title"><span class="docs-flag">'+d.flag+'</span>'+d.dest+'</div>';
+    html += '<div class="docs-reqs">';
+    d.reqs.forEach(function(r){ html += '<div class="docs-req">📌 '+r+'</div>'; });
+    html += '</div></div>';
+  });
+  html += '</div>';
+
+  html += '<div class="docs-section"><div class="docs-section-title">🛡️ SEGURO VIAGEM — GUIA DE COBERTURAS</div>';
+  html += '<div class="docs-card">';
+  html += '<div class="docs-card-title">O que deve ter em um bom seguro viagem</div>';
+  html += '<div class="docs-reqs">';
+  html += '<div class="docs-req">✅ Despesas médicas e hospitalares (mínimo USD 30.000)</div>';
+  html += '<div class="docs-req">✅ Translado médico de emergência</div>';
+  html += '<div class="docs-req">✅ Cancelamento de viagem</div>';
+  html += '<div class="docs-req">✅ Extravio de bagagem</div>';
+  html += '<div class="docs-req">✅ Morte acidental</div>';
+  html += '<div class="docs-req">❌ Esportes de alto risco — verificar cobertura extra</div>';
+  html += '<div class="docs-req">❌ Doenças pré-existentes — verificar apólice específica</div>';
+  html += '</div>';
+  html += '<div class="docs-card-actions"><button class="docs-btn-secondary" onclick="pedirIaSeguro()">🤖 Perguntar à IA sobre seguro</button></div>';
+  html += '</div></div>';
+
+  html += '<div class="docs-section"><div class="docs-section-title">💡 DICAS RÁPIDAS</div>';
+  html += '<div class="docs-card">';
+  html += '<div class="docs-card-title">Checklist de documentação para o cliente</div>';
+  html += '<div class="docs-reqs">';
+  html += '<div class="docs-req">📌 Passaporte deve ter validade mínima de 6 meses além do retorno</div>';
+  html += '<div class="docs-req">📌 Tire cópia de todos os documentos e deixe na nuvem</div>';
+  html += '<div class="docs-req">📌 Seguro viagem deve ser contratado antes do embarque</div>';
+  html += '<div class="docs-req">📌 Para cruzeiros: passaporte obrigatório mesmo em rotas nacionais</div>';
+  html += '<div class="docs-req">📌 Vacinas exigidas variam por destino — verificar sempre</div>';
+  html += '<div class="docs-req">📌 Declaração de acompanhamento de menor deve ser autenticada</div>';
+  html += '</div></div></div>';
+
+  html += '</div>';
+  msgs.innerHTML = html;
+  wvis = false;
+}
+
+function openMenor() { document.getElementById('menorm').classList.add('open'); }
+function closeMenor() { document.getElementById('menorm').classList.remove('open'); }
+
+function pedirIaSeguro() {
+  setMode('geral', false);
+  hist = [];
+  if (!wvis) { document.getElementById('msgs').innerHTML = ''; wvis = true; }
+  document.getElementById('ui').value = 'Me explique quais são as coberturas essenciais de um seguro viagem e como apresentar isso ao cliente de forma consultiva, destacando o valor do seguro para fechar mais vendas.';
+  send();
+}
+
+function gerarPdfMenor() {
+  if (!window.jspdf || !window.jspdf.jsPDF) { alert('Biblioteca jsPDF não carregada.'); return; }
+  var nome = document.getElementById('men-nome').value.trim();
+  var nasc = document.getElementById('men-nasc').value;
+  var paiNome = document.getElementById('men-pai-nome').value.trim();
+  var paiCpf = document.getElementById('men-pai-cpf').value.trim();
+  var maeNome = document.getElementById('men-mae-nome').value.trim();
+  var maeCpf = document.getElementById('men-mae-cpf').value.trim();
+  var destino = document.getElementById('men-destino').value.trim();
+  var ida = document.getElementById('men-ida').value;
+  var volta = document.getElementById('men-volta').value;
+  var acomp = document.getElementById('men-acomp').value.trim();
+  if (!nome) { alert('Informe o nome do menor.'); return; }
+  var doc = new window.jspdf.jsPDF({ unit:'mm', format:'a4' });
+  var W = doc.internal.pageSize.getWidth();
+  var mg = 20; var y = 0;
+  doc.setFillColor(54,52,53); doc.rect(0,0,W,38,'F');
+  doc.setFillColor(255,204,41); doc.rect(0,38,W,3,'F');
+  doc.setTextColor(255,204,41); doc.setFontSize(20); doc.setFont('helvetica','bold');
+  doc.text('DOM TRAVEL', mg, 20);
+  doc.setTextColor(200,200,200); doc.setFontSize(9.5); doc.setFont('helvetica','normal');
+  doc.text('Agência de Viagens Consultiva', mg, 28);
+  y = 52;
+  doc.setTextColor(54,52,53); doc.setFontSize(15); doc.setFont('helvetica','bold');
+  doc.text('AUTORIZAÇÃO DE VIAGEM — MENOR DESACOMPANHADO', W/2, y, {align:'center'}); y += 6;
+  doc.setFontSize(9); doc.setFont('helvetica','normal'); doc.setTextColor(100,100,100);
+  doc.text('Resolução CNJ nº 295/2019', W/2, y, {align:'center'}); y += 10;
+  doc.setDrawColor(200,200,200); doc.line(mg, y, W-mg, y); y += 8;
+  var fields = [
+    ['Menor:', nome],
+    ['Data de nascimento:', nasc ? new Date(nasc+'T12:00:00').toLocaleDateString('pt-BR') : ''],
+    ['Destino da viagem:', destino],
+    ['Data de embarque:', ida ? new Date(ida+'T12:00:00').toLocaleDateString('pt-BR') : ''],
+    ['Data de retorno:', volta ? new Date(volta+'T12:00:00').toLocaleDateString('pt-BR') : ''],
+    ['Acompanhante:', acomp || 'Viajará desacompanhado(a)'],
+    ['', ''],
+    ['PAI/RESPONSÁVEL:', ''],
+    ['Nome:', paiNome],
+    ['CPF:', paiCpf],
+    ['', ''],
+    ['MÃE/RESPONSÁVEL:', ''],
+    ['Nome:', maeNome],
+    ['CPF:', maeCpf]
+  ];
+  fields.forEach(function(f) {
+    if (!f[0] && !f[1]) { y += 3; return; }
+    doc.setFont('helvetica', f[1]==='' ? 'bold' : 'normal');
+    doc.setFontSize(10); doc.setTextColor(54,52,53);
+    if (f[1] === '') {
+      doc.setTextColor(255,150,0);
+      doc.text(f[0], mg, y);
+    } else {
+      doc.setTextColor(100,100,100); doc.text(f[0], mg, y);
+      doc.setTextColor(54,52,53); doc.setFont('helvetica','bold'); doc.text(f[1], mg+45, y);
+    }
+    y += 7;
+  });
+  y += 8;
+  doc.setFont('helvetica','normal'); doc.setFontSize(9); doc.setTextColor(100,100,100);
+  var textoAuth = 'Eu(nós), abaixo assinado(s), na condição de pai(s)/mãe(s)/responsável(is) legal(is) pelo menor acima identificado, autorizo(amos) expressamente a viagem descrita, comprometendo-nos pela veracidade das informações prestadas.';
+  var lines = doc.splitTextToSize(textoAuth, W-mg*2);
+  lines.forEach(function(l){ doc.text(l, mg, y); y += 5; });
+  y += 14;
+  var halfW = (W-mg*2)/2 - 5;
+  doc.setDrawColor(100,100,100); doc.line(mg, y, mg+halfW, y);
+  doc.line(W-mg-halfW, y, W-mg, y);
+  y += 5;
+  doc.setFontSize(9);
+  doc.text('Assinatura do Pai/Responsável', mg, y);
+  doc.text('Assinatura da Mãe/Responsável', W-mg-halfW, y);
+  y += 8;
+  doc.text('CPF: '+paiCpf, mg, y);
+  doc.text('CPF: '+maeCpf, W-mg-halfW, y);
+  y += 14;
+  var cidade = 'Fernandópolis, ' + new Date().toLocaleDateString('pt-BR', {day:'2-digit',month:'long',year:'numeric'});
+  doc.text(cidade, W/2, y, {align:'center'});
+  var pages = doc.internal.getNumberOfPages();
+  for (var p=1; p<=pages; p++) {
+    var H = doc.internal.pageSize.getHeight();
+    doc.setPage(p);
+    doc.setFillColor(245,243,238); doc.rect(0,H-16,W,16,'F');
+    doc.setTextColor(120,120,120); doc.setFontSize(8); doc.setFont('helvetica','normal');
+    doc.text('www.domtravel.com.br  |  (17) 3353-2026', mg, H-6);
+    doc.text('Pág '+p+'/'+pages, W-mg, H-6, {align:'right'});
+  }
+  doc.save('autorizacao-menor-domtravel.pdf');
+  closeMenor();
 }
 </script>
 </body>
