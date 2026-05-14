@@ -1718,7 +1718,7 @@ function orcStep1HTML() {
   var hasImg = !!orcState.imageData;
   return '<div class="orc-body"><div class="orc-step-header">Upload da cotação</div>' +
     '<div class="orc-step-sub">Envie o print ou imagem da cotação para extrair os dados automaticamente com IA.</div>' +
-    '<div class="orc-drop" id="orc-drop" onclick="document.getElementById('orc-file-inp').click()">' +
+    '<div class="orc-drop" id="orc-drop" onclick="document.getElementById(\'orc-file-inp\').click()">' +
     '<div class="orc-drop-icon">' + (hasImg ? '🖼️' : '📎') + '</div>' +
     '<div class="orc-drop-txt">' + (hasImg ? 'Imagem carregada! Clique para trocar.' : 'Arraste a imagem aqui ou clique para selecionar<br>ou cole com <strong>Ctrl+V</strong>') + '</div>' +
     '<div class="orc-drop-sub">PNG, JPEG, WEBP · máx. 5MB</div>' +
@@ -1784,7 +1784,7 @@ function orcStep2HTML() {
     field('Chegada', inp('voo-ida-cheg', s.vooIdaChegada, 'HH:MM')) +
     field('Duração', inp('voo-ida-dur', s.vooIdaDuracao, 'Xh Xmin')) +
     '</div>' + vooIdaConns +
-    '<button class="orc-add-conn" onclick="orcAddConexao('ida')">+ Adicionar conexão</button>' +
+    '<button class="orc-add-conn" onclick="orcAddConexao(\'ida\')">+ Adicionar conexão</button>' +
     '</div>' +
     '<div class="orc-section"><div class="orc-section-title">✈️ Voo de volta</div>' +
     '<div class="orc-grid2">' +
@@ -1798,7 +1798,7 @@ function orcStep2HTML() {
     field('Chegada', inp('voo-volta-cheg', s.vooVoltaChegada, 'HH:MM')) +
     field('Duração', inp('voo-volta-dur', s.vooVoltaDuracao, 'Xh Xmin')) +
     '</div>' + vooVoltaConns +
-    '<button class="orc-add-conn" onclick="orcAddConexao('volta')">+ Adicionar conexão</button>' +
+    '<button class="orc-add-conn" onclick="orcAddConexao(\'volta\')">+ Adicionar conexão</button>' +
     '</div>' +
     '<div class="orc-section"><div class="orc-section-title">🏨 Hospedagem</div>' +
     field('Nome do hotel', inp('hotel-nome', s.hotelNome, 'Nome do hotel')) +
