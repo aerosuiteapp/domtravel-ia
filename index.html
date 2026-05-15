@@ -502,6 +502,45 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--tx);min-hei
 .docs-btn-secondary{display:flex;align-items:center;gap:5px;padding:7px 14px;border:1px solid var(--b2);border-radius:var(--rx);background:none;font-size:12px;color:var(--tx2);cursor:pointer;font-family:'Inter',sans-serif}
 .docs-btn-secondary:hover{background:var(--bg3);color:var(--tx)}
 .docs-flag{font-size:16px;margin-right:4px}
+
+/* WIDGET CHAT FLUTUANTE */
+#fw-btn{position:fixed;bottom:24px;right:24px;width:56px;height:56px;border-radius:50%;background:var(--am);border:none;cursor:pointer;display:none;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(255,204,41,0.45);z-index:9000;transition:transform .2s,box-shadow .2s;flex-shrink:0}
+#fw-btn:hover{transform:scale(1.08);box-shadow:0 6px 28px rgba(255,204,41,0.55)}
+#fw-btn svg{width:26px;height:26px;fill:var(--pr)}
+#fw-badge{position:absolute;top:-3px;right:-3px;width:10px;height:10px;border-radius:50%;background:#3dd68c;border:2px solid var(--am);display:none}
+#fw-win{position:fixed;bottom:92px;right:24px;width:360px;height:520px;background:#fff;border-radius:16px;box-shadow:0 8px 32px rgba(0,0,0,0.15);z-index:9001;display:none;flex-direction:column;overflow:hidden;transform-origin:bottom right;transition:opacity .2s,transform .2s}
+#fw-win.fw-open{display:flex;animation:fwIn .2s ease both}
+@keyframes fwIn{from{opacity:0;transform:scale(0.88)}to{opacity:1;transform:scale(1)}}
+#fw-head{background:var(--pr);padding:14px 16px;display:flex;align-items:center;gap:10px;flex-shrink:0}
+#fw-head-logo{height:22px;width:auto;filter:brightness(10)}
+#fw-head-title{font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:#fff;flex:1}
+#fw-head-sub{font-size:11px;color:rgba(255,255,255,0.6);font-family:'Inter',sans-serif}
+#fw-close{background:none;border:none;cursor:pointer;color:rgba(255,255,255,0.7);display:flex;padding:4px;border-radius:6px;transition:background .15s}
+#fw-close:hover{background:rgba(255,255,255,0.12);color:#fff}
+#fw-close svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+#fw-msgs{flex:1;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:10px;background:#F5F5F5}
+.fw-msg{display:flex;gap:8px;align-items:flex-end}
+.fw-msg.fw-user{flex-direction:row-reverse}
+.fw-av{width:28px;height:28px;border-radius:50%;background:var(--pr);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:12px;font-weight:700;color:#fff;font-family:'Syne',sans-serif}
+.fw-av img{width:28px;height:28px;border-radius:50%;object-fit:cover}
+.fw-bubble{max-width:240px;padding:9px 13px;border-radius:14px;font-size:13px;line-height:1.55;font-family:'Inter',sans-serif}
+.fw-msg.fw-ai .fw-bubble{background:#fff;color:#363435;border-bottom-left-radius:4px;box-shadow:0 1px 4px rgba(0,0,0,0.07)}
+.fw-msg.fw-user .fw-bubble{background:var(--pr);color:#fff;border-bottom-right-radius:4px}
+.fw-chips{display:flex;flex-wrap:wrap;gap:6px;padding:0 14px 10px}
+.fw-chip{padding:6px 12px;border:1.5px solid rgba(54,52,53,0.15);border-radius:20px;font-size:12px;color:#363435;background:#fff;cursor:pointer;font-family:'Inter',sans-serif;transition:background .15s,border-color .15s;white-space:nowrap}
+.fw-chip:hover{background:#FFCC29;border-color:#FFCC29;color:#363435}
+.fw-typing{display:flex;gap:4px;align-items:center;padding:2px 0}
+.fw-typing span{width:6px;height:6px;border-radius:50%;background:#9E9C9B;animation:fwDot 1.2s ease-in-out infinite}
+.fw-typing span:nth-child(2){animation-delay:.2s}
+.fw-typing span:nth-child(3){animation-delay:.4s}
+@keyframes fwDot{0%,80%,100%{transform:scale(0.7);opacity:.5}40%{transform:scale(1);opacity:1}}
+#fw-footer{background:#fff;padding:10px 12px;display:flex;gap:8px;align-items:flex-end;border-top:1px solid rgba(0,0,0,0.07);flex-shrink:0}
+#fw-inp{flex:1;border:1.5px solid rgba(0,0,0,0.12);border-radius:10px;padding:9px 12px;font-family:'Inter',sans-serif;font-size:13px;color:#363435;outline:none;resize:none;min-height:38px;max-height:100px;line-height:1.5;transition:border-color .2s}
+#fw-inp:focus{border-color:#FFCC29}
+#fw-inp::placeholder{color:#9E9C9B}
+#fw-send{width:38px;height:38px;border-radius:10px;background:#FFCC29;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .15s}
+#fw-send:hover{background:#e6b800}
+#fw-send svg{width:16px;height:16px;stroke:#363435;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
@@ -573,17 +612,18 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--tx);min-hei
       <div class="ss">
         <div class="ssl">Modos de uso</div>
         <button class="mb active" id="m-assistente" onclick="setMode('assistente')"><div class="mi">🤖</div><div><div class="mn">Assistente IA</div><div class="md">Escolha o modo</div></div></button>
-        <button class="mb" id="m-biblioteca" onclick="setMode('biblioteca')"><div class="mi">🌍</div><div><div class="mn">Biblioteca</div><div class="md">Cards de destinos</div></div></button>
-        <button class="mb" id="m-qualificar" onclick="setMode('qualificar')"><div class="mi">🎯</div><div><div class="mn">Qualificar cliente</div><div class="md">Entrevista guiada</div></div></button>
-        <button class="mb" id="m-objbase" onclick="setMode('objbase')"><div class="mi">🛡️</div><div><div class="mn">Objeções</div><div class="md">Base de respostas</div></div></button>
-        <button class="mb" id="m-whatsapp" onclick="setMode('whatsapp')"><div class="mi">💬</div><div><div class="mn">Mensagens</div><div class="md">Templates WhatsApp</div></div></button>
-        <button class="mb" id="m-calc" onclick="setMode('calc')"><div class="mi">🧮</div><div><div class="mn">Calculadora</div><div class="md">Orçamento de pacotes</div></div></button>
-        <button class="mb" id="m-metricas" onclick="setMode('metricas')" style="display:none"><div class="mi">📊</div><div><div class="mn">Métricas</div><div class="md">Dashboard de uso</div></div></button>
-        <button class="mb" id="m-orcamentos" onclick="setMode('orcamentos')"><div class="mi">📋</div><div><div class="mn">Orçamentos</div><div class="md">Gerador profissional</div></div></button>
-        <button class="mb" id="m-docs" onclick="setMode('docs')"><div class="mi">📋</div><div><div class="mn">Documentos</div><div class="md">Guias e formulários</div></div></button>
         <button class="mb" id="m-marketing" onclick="setMode('marketing')"><div class="mi">📁</div><div><div class="mn">Base de Marketing</div><div class="md">Mídias por destino</div></div></button>
         <button class="mb" id="m-links" onclick="setMode('links')"><div class="mi">🔗</div><div><div class="mn">Links Úteis</div><div class="md">Sites e ferramentas</div></div></button>
         <button class="mb" id="m-wiki" onclick="setMode('wiki')"><div class="mi">📖</div><div><div class="mn">Wiki</div><div class="md">Base de conhecimento</div></div></button>
+        <button class="mb" id="m-orcamentos" onclick="setMode('orcamentos')"><div class="mi">📋</div><div><div class="mn">Orçamentos</div><div class="md">Gerador profissional</div></div></button>
+        <button class="mb" id="m-calc" onclick="setMode('calc')"><div class="mi">🧮</div><div><div class="mn">Calculadora</div><div class="md">Orçamento de pacotes</div></div></button>
+        <button class="mb" id="m-metricas" onclick="setMode('metricas')" style="display:none"><div class="mi">📊</div><div><div class="mn">Métricas</div><div class="md">Dashboard de uso</div></div></button>
+        <button class="mb" id="m-docs" onclick="setMode('docs')"><div class="mi">📋</div><div><div class="mn">Documentos</div><div class="md">Guias e formulários</div></div></button>
+        <button class="mb" id="m-biblioteca" onclick="setMode('biblioteca')"><div class="mi">🌍</div><div><div class="mn">Biblioteca</div><div class="md">Cards de destinos</div></div></button>
+        <!-- modos ocultos: acessiveis pelo Assistente IA -->
+        <button class="mb" id="m-qualificar" style="display:none" onclick="setMode('qualificar')"></button>
+        <button class="mb" id="m-objbase" style="display:none" onclick="setMode('objbase')"></button>
+        <button class="mb" id="m-whatsapp" style="display:none" onclick="setMode('whatsapp')"></button>
       </div>
       <div class="ss" id="hist-section" style="display:none">
         <div class="ssl">Histórico</div>
@@ -836,7 +876,7 @@ function doLogin() {
       document.getElementById('uavatar').textContent = user.nome.charAt(0).toUpperCase();
       document.getElementById('wh').textContent = 'Ola, ' + user.nome + '!';
       if(document.getElementById('m-metricas')) document.getElementById('m-metricas').style.display = user.role==='admin' ? 'flex' : 'none';
-      loadKey(); loadHistory(); document.getElementById('ui').focus();
+      loadKey(); loadHistory(); document.getElementById('ui').focus(); fwInit();
     } else {
       btn.disabled = false;
       spin.style.display = 'none';
@@ -3206,6 +3246,167 @@ function wikiAddSection() {
   renderWiki();
 }
 
+</script>
+
+<!-- WIDGET CHAT FLUTUANTE -->
+<button id="fw-btn" onclick="fwToggle()" title="Assistente IA">
+  <span id="fw-badge"></span>
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a10 10 0 1 1 0 20A10 10 0 0 1 12 2zm0 2a8 8 0 1 0 0 16A8 8 0 0 0 12 4zM9 9a1 1 0 0 1 1 1v1h4V10a1 1 0 1 1 2 0v2a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1zm7 5.5c0 1.38-1.79 2.5-4 2.5s-4-1.12-4-2.5c0-.28.22-.5.5-.5h7c.28 0 .5.22.5.5zM8.5 7a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zm7 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3z"/></svg>
+</button>
+<div id="fw-win">
+  <div id="fw-head">
+    <img id="fw-head-logo" src="" alt="Dom Travel">
+    <div>
+      <div id="fw-head-title">Assistente IA</div>
+      <div id="fw-head-sub">Dom Travel · Online</div>
+    </div>
+    <button id="fw-close" onclick="fwToggle()">
+      <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div id="fw-msgs"></div>
+  <div id="fw-chips" class="fw-chips"></div>
+  <div id="fw-footer">
+    <textarea id="fw-inp" placeholder="Digite sua mensagem..." rows="1" onkeydown="fwKey(event)" oninput="fwResize(this)"></textarea>
+    <button id="fw-send" onclick="fwSend()">
+      <svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
+  </div>
+</div>
+
+<script>
+// ===========================
+// WIDGET CHAT FLUTUANTE
+// ===========================
+var fwOpen = false;
+var fwBusy = false;
+var fwHist = [];
+var fwWelcomed = false;
+
+var FW_CHIPS = [
+  {label:'Montar roteiro', mode:'roteiro'},
+  {label:'Tratar objeção', mode:'objecao'},
+  {label:'Pesquisar destino', mode:'destino'},
+  {label:'Melhorar mensagem', mode:'mensagem'}
+];
+
+function fwInit() {
+  var btn = document.getElementById('fw-btn');
+  var logo = document.getElementById('fw-head-logo');
+  if (logo && typeof LP_B64 !== 'undefined') logo.src = LP_B64;
+  if (btn) btn.style.display = 'flex';
+  if (!fwWelcomed) {
+    fwWelcomed = true;
+    fwAddMsg('ai', 'Olá! Sou o assistente IA da Dom Travel. Como posso ajudar você agora?');
+    fwRenderChips();
+  }
+}
+
+function fwToggle() {
+  fwOpen = !fwOpen;
+  var win = document.getElementById('fw-win');
+  if (fwOpen) {
+    win.classList.add('fw-open');
+    var badge = document.getElementById('fw-badge');
+    if (badge) badge.style.display = 'none';
+    setTimeout(function(){ var inp = document.getElementById('fw-inp'); if(inp) inp.focus(); }, 250);
+  } else {
+    win.classList.remove('fw-open');
+  }
+}
+
+function fwAddMsg(role, text) {
+  var msgs = document.getElementById('fw-msgs');
+  if (!msgs) return;
+  var row = document.createElement('div');
+  row.className = 'fw-msg fw-' + role;
+  var ft = text.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/\*\*([^*]+)\*\*/g,'<strong>$1</strong>').replace(/\n/g,'<br>');
+  var av = role === 'ai'
+    ? '<div class="fw-av"><img src="' + (typeof LP_B64 !== 'undefined' ? LP_B64 : '') + '" alt="IA"></div>'
+    : '<div class="fw-av" style="background:var(--pr)">' + (curUser ? curUser.nome.charAt(0).toUpperCase() : '?') + '</div>';
+  row.innerHTML = av + '<div class="fw-bubble">' + ft + '</div>';
+  msgs.appendChild(row);
+  msgs.scrollTop = 99999;
+}
+
+function fwShowTyping() {
+  var msgs = document.getElementById('fw-msgs');
+  var row = document.createElement('div');
+  row.className = 'fw-msg fw-ai'; row.id = 'fw-typing';
+  row.innerHTML = '<div class="fw-av"><img src="' + (typeof LP_B64 !== 'undefined' ? LP_B64 : '') + '" alt="IA"></div><div class="fw-bubble"><div class="fw-typing"><span></span><span></span><span></span></div></div>';
+  msgs.appendChild(row);
+  msgs.scrollTop = 99999;
+}
+
+function fwHideTyping() {
+  var t = document.getElementById('fw-typing'); if(t) t.remove();
+}
+
+function fwRenderChips() {
+  var c = document.getElementById('fw-chips');
+  if (!c) return;
+  c.innerHTML = FW_CHIPS.map(function(ch) {
+    return '<button class="fw-chip" onclick="fwChip(\'' + ch.mode + '\',\'' + ch.label + '\')">' + ch.label + '</button>';
+  }).join('');
+}
+
+function fwChip(mode, label) {
+  document.getElementById('fw-chips').innerHTML = '';
+  fwAddMsg('user', label);
+  fwHist.push({role:'user', content: 'Quero ajuda com: ' + label});
+  fwCall(mode);
+}
+
+async function fwSend() {
+  if (fwBusy) return;
+  var inp = document.getElementById('fw-inp');
+  var txt = inp.value.trim();
+  if (!txt) return;
+  if (!key) { alert('Configure a chave da API primeiro (botão API no topo).'); return; }
+  document.getElementById('fw-chips').innerHTML = '';
+  inp.value = ''; inp.style.height = 'auto';
+  fwAddMsg('user', txt);
+  fwHist.push({role:'user', content:txt});
+  await fwCall(null);
+}
+
+async function fwCall(modeHint) {
+  if (!key) return;
+  fwBusy = true;
+  var send = document.getElementById('fw-send');
+  if (send) send.disabled = true;
+  fwShowTyping();
+  var sys = (typeof SYS !== 'undefined' ? SYS : '') + (modeHint && typeof MP !== 'undefined' && MP[modeHint] ? ' ' + MP[modeHint].replace(typeof SYS !== 'undefined' ? SYS : '','').trim() : '');
+  if (modeHint && typeof MP !== 'undefined' && MP[modeHint]) sys = MP[modeHint];
+  try {
+    var r = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {'Content-Type':'application/json','x-api-key':key,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
+      body: JSON.stringify({model:'claude-sonnet-4-20250514', max_tokens:900, system:sys, messages:fwHist})
+    });
+    var d = await r.json();
+    if (d.error) throw new Error(d.error.message);
+    var rep = d.content && d.content.find(function(b){return b.type==='text';});
+    var txt2 = rep ? rep.text : 'Não consegui gerar resposta.';
+    fwHist.push({role:'assistant', content:txt2});
+    fwHideTyping();
+    fwAddMsg('ai', txt2);
+  } catch(e) {
+    fwHideTyping();
+    fwAddMsg('ai', 'Erro: ' + (e.message || 'Verifique sua chave de API.'));
+  }
+  fwBusy = false;
+  if (send) send.disabled = false;
+}
+
+function fwKey(e) {
+  if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); fwSend(); }
+}
+
+function fwResize(el) {
+  el.style.height = 'auto';
+  el.style.height = Math.min(el.scrollHeight, 100) + 'px';
+}
 </script>
 </body>
 </html>
