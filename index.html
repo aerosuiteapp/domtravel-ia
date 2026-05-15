@@ -137,6 +137,51 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--tx);min-hei
 .orc-final-btn.pdf{background:var(--am);border:none;color:var(--pr)}
 .orc-final-btn.pdf:hover{background:var(--am-d)}
 
+/* GERADOR WHATSAPP */
+.orc-mode-tabs{display:flex;gap:0;border-bottom:1px solid var(--b1);padding:0 24px;flex-shrink:0;background:var(--bg2)}
+.orc-mode-tab{padding:13px 18px;background:none;border:none;border-bottom:2px solid transparent;font-family:'Inter',sans-serif;font-size:13px;font-weight:600;color:var(--tx3);cursor:pointer;margin-bottom:-1px;transition:color .2s,border-color .2s;white-space:nowrap}
+.orc-mode-tab.active{color:var(--am);border-bottom-color:var(--am)}
+.wa-layout{display:grid;grid-template-columns:1fr 1fr;gap:0;flex:1;min-height:0;overflow:hidden}
+.wa-form-col{overflow-y:auto;padding:20px 16px 24px 24px;border-right:1px solid var(--b1)}
+.wa-preview-col{overflow-y:auto;padding:20px 24px 24px 16px;display:flex;flex-direction:column;gap:12px}
+.wa-inner-tabs{display:flex;gap:0;margin-bottom:14px;border-bottom:1px solid var(--b1)}
+.wa-inner-tab{padding:8px 14px;background:none;border:none;border-bottom:2px solid transparent;font-family:'Inter',sans-serif;font-size:12px;font-weight:600;color:var(--tx3);cursor:pointer;margin-bottom:-1px;transition:color .15s,border-color .15s}
+.wa-inner-tab.active{color:var(--am);border-bottom-color:var(--am)}
+.wa-section{margin-bottom:14px}
+.wa-section-title{font-size:10px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--am);margin-bottom:8px}
+.wa-field{display:flex;flex-direction:column;gap:4px;margin-bottom:8px}
+.wa-label{font-size:10px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--tx3)}
+.wa-inp{background:var(--bg3);border:1px solid var(--b2);border-radius:var(--rx);padding:8px 11px;font-family:'Inter',sans-serif;font-size:13px;color:var(--tx);outline:none;transition:border-color .2s;width:100%}
+.wa-inp:focus{border-color:var(--am)}
+.wa-inp::placeholder{color:var(--tx3)}
+.wa-ta{resize:vertical;min-height:65px}
+.wa-grid2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.wa-list-row{display:flex;gap:6px;align-items:center;margin-bottom:5px}
+.wa-list-row .wa-inp{flex:1}
+.wa-list-row .wa-inp.price{width:95px;flex:none}
+.wa-del-btn{background:none;border:1px solid var(--b2);border-radius:var(--rx);width:28px;height:28px;display:flex;align-items:center;justify-content:center;font-size:16px;color:var(--tx3);cursor:pointer;flex-shrink:0;transition:border-color .15s,color .15s;line-height:1;padding:0}
+.wa-del-btn:hover{border-color:#e05;color:#e05}
+.wa-add-btn{display:inline-flex;align-items:center;gap:4px;padding:5px 12px;border:1px dashed var(--b2);border-radius:var(--rx);background:none;font-size:11px;color:var(--tx3);cursor:pointer;font-family:'Inter',sans-serif;margin-top:2px;transition:border-color .15s,color .15s}
+.wa-add-btn:hover{border-color:var(--am);color:var(--am)}
+.wa-gen-btn{width:100%;padding:11px;border:none;border-radius:var(--rx);background:var(--am);color:var(--pr);font-family:'Syne',sans-serif;font-size:14px;font-weight:700;cursor:pointer;margin-top:12px;transition:background .15s}
+.wa-gen-btn:hover{background:var(--am-d)}
+.wa-format-row{display:flex;align-items:center;gap:8px;margin-top:10px;flex-wrap:wrap}
+.wa-format-lbl{font-size:11px;color:var(--tx3)}
+.wa-fmt-btn{padding:4px 12px;border:1px solid var(--b2);border-radius:20px;background:none;font-size:11px;color:var(--tx3);cursor:pointer;font-family:'Inter',sans-serif;transition:all .15s}
+.wa-fmt-btn.active{background:var(--am);color:var(--pr);border-color:var(--am);font-weight:600}
+.wa-preview-hd{display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+.wa-preview-title{font-size:10px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--tx3)}
+.wa-copy-btn{display:flex;align-items:center;gap:5px;padding:6px 14px;border:1px solid var(--b2);border-radius:var(--rx);background:none;font-size:12px;color:var(--tx2);cursor:pointer;font-family:'Inter',sans-serif;transition:background .15s,color .15s}
+.wa-copy-btn:hover{background:var(--bg3);color:var(--tx)}
+.wa-preview-area{background:var(--bg3);border:1px solid var(--b2);border-radius:var(--rs);padding:16px;font-size:13px;color:var(--tx);line-height:1.8;white-space:pre-wrap;font-family:'Inter',sans-serif;word-break:break-word;flex:1;min-height:200px}
+.wa-preview-empty{display:flex;flex-direction:column;align-items:center;justify-content:center;flex:1;min-height:260px;color:var(--tx3);text-align:center;font-size:13px;gap:8px;background:var(--bg3);border:1px solid var(--b2);border-radius:var(--rs);padding:24px}
+.wa-ai-ta{background:var(--bg3);border:1px solid var(--b2);border-radius:var(--rs);padding:12px 14px;font-family:'Inter',sans-serif;font-size:13px;color:var(--tx);outline:none;width:100%;resize:vertical;min-height:200px;transition:border-color .2s}
+.wa-ai-ta:focus{border-color:var(--am)}
+.wa-ai-btn{width:100%;padding:11px;border:none;border-radius:var(--rx);background:linear-gradient(135deg,#7c3aed,#4f46e5);color:#fff;font-family:'Syne',sans-serif;font-size:14px;font-weight:700;cursor:pointer;margin-top:10px;display:flex;align-items:center;justify-content:center;gap:8px;transition:opacity .2s}
+.wa-ai-btn:hover{opacity:.9}
+.wa-ai-btn:disabled{opacity:.5;cursor:default}
+@media(max-width:900px){.wa-layout{grid-template-columns:1fr}.wa-form-col{border-right:none;border-bottom:1px solid var(--b1)}}
+
 /* MARKETING */
 .mkt-wrap{padding:20px 24px}
 .mkt-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;flex-wrap:wrap;gap:10px}
@@ -1926,15 +1971,34 @@ function orcIncCounter() {
   localStorage.setItem('dt_orc_cnt', JSON.stringify(d));
 }
 
+var waOrcTab = 'prof';
+var waState = {
+  destino:'', saidaDe:'', dataIda:'', dataVolta:'', pax:'2', apto:'Duplo Standard',
+  vooIda:'', vooVolta:'', obsVoos:'',
+  inclusoPacote:'Passagem aérea ida e volta\nHospedagem com café da manhã\nTraslados aeroporto/hotel/aeroporto\nSeguro viagem',
+  hoteis3:[], hoteis4:[], hoteis5:[], opcionais:[],
+  formaPagamento:'Cartão: Entrada + 10x sem juros | Boleto: Entrada + 12x sem juros',
+  observacoes:'', site:'www.domtravel.com.br', instagram:'@bydomtravel',
+  formato:'whatsapp', previewText:'', innerTab:'manual'
+};
+
 function renderOrcamentos() {
   var msgs = document.getElementById('msgs');
   msgs.innerHTML = '<div class="orc-wrap" id="orc-wrap"></div>';
-  orcRenderStep();
+  if (waOrcTab === 'wa') {
+    waRenderGenerator();
+  } else {
+    orcRenderStep();
+  }
 }
 
 function orcStepsHTML() {
   var steps = ['Upload','Revisar','Valor','Gerar'];
-  var h = '<div class="orc-progress">';
+  var h = '<div class="orc-mode-tabs">' +
+    '<button class="orc-mode-tab active" onclick="switchOrcTab(\'prof\')">📄 Gerador Profissional</button>' +
+    '<button class="orc-mode-tab" onclick="switchOrcTab(\'wa\')">💬 Gerador WhatsApp</button>' +
+    '</div>' +
+    '<div class="orc-progress">';
   for (var i = 0; i < steps.length; i++) {
     var s = i + 1;
     var cls = s < orcState.step ? 'orc-step done' : (s === orcState.step ? 'orc-step active' : 'orc-step');
@@ -3406,6 +3470,358 @@ function fwKey(e) {
 function fwResize(el) {
   el.style.height = 'auto';
   el.style.height = Math.min(el.scrollHeight, 100) + 'px';
+}
+
+// ── GERADOR WHATSAPP ─────────────────────────────────────────────────────────────────────
+
+function switchOrcTab(tab) {
+  waOrcTab = tab;
+  renderOrcamentos();
+}
+
+function waSwitchTab(tab) {
+  waSaveFormState();
+  waState.innerTab = tab;
+  waRenderGenerator();
+}
+
+function waEsc(v) {
+  return (v||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function waSaveFormState() {
+  var g = function(id){ var el=document.getElementById(id); return el?el.value:''; };
+  waState.destino = g('wa-destino');
+  waState.saidaDe = g('wa-saida');
+  waState.dataIda = g('wa-data-ida');
+  waState.dataVolta = g('wa-data-volta');
+  waState.pax = g('wa-pax');
+  waState.apto = g('wa-apto');
+  waState.vooIda = g('wa-voo-ida');
+  waState.vooVolta = g('wa-voo-volta');
+  waState.obsVoos = g('wa-obs-voos');
+  waState.inclusoPacote = g('wa-incluso');
+  waState.formaPagamento = g('wa-forma-pag');
+  waState.observacoes = g('wa-obs');
+  waState.site = g('wa-site');
+  waState.instagram = g('wa-instagram');
+  for (var i3=0;i3<waState.hoteis3.length;i3++) {
+    var n3=document.getElementById('wa-hotel3-nome-'+i3), p3=document.getElementById('wa-hotel3-preco-'+i3);
+    waState.hoteis3[i3]={nome:n3?n3.value:'',preco:p3?p3.value:''};
+  }
+  for (var i4=0;i4<waState.hoteis4.length;i4++) {
+    var n4=document.getElementById('wa-hotel4-nome-'+i4), p4=document.getElementById('wa-hotel4-preco-'+i4);
+    waState.hoteis4[i4]={nome:n4?n4.value:'',preco:p4?p4.value:''};
+  }
+  for (var i5=0;i5<waState.hoteis5.length;i5++) {
+    var n5=document.getElementById('wa-hotel5-nome-'+i5), p5=document.getElementById('wa-hotel5-preco-'+i5);
+    waState.hoteis5[i5]={nome:n5?n5.value:'',preco:p5?p5.value:''};
+  }
+  for (var io=0;io<waState.opcionais.length;io++) {
+    var no=document.getElementById('wa-opc-nome-'+io), po=document.getElementById('wa-opc-preco-'+io);
+    waState.opcionais[io]={nome:no?no.value:'',preco:po?po.value:''};
+  }
+}
+
+function waAddHotel(star) {
+  waSaveFormState();
+  waState['hoteis'+star].push({nome:'',preco:''});
+  waRenderGenerator();
+}
+
+function waRemoveHotel(star, idx) {
+  waSaveFormState();
+  waState['hoteis'+star].splice(idx,1);
+  waRenderGenerator();
+}
+
+function waAddOpcional() {
+  waSaveFormState();
+  waState.opcionais.push({nome:'',preco:''});
+  waRenderGenerator();
+}
+
+function waRemoveOpcional(idx) {
+  waSaveFormState();
+  waState.opcionais.splice(idx,1);
+  waRenderGenerator();
+}
+
+function waSetFormato(fmt) {
+  waSaveFormState();
+  waState.formato = fmt;
+  var btns = document.querySelectorAll('.wa-fmt-btn');
+  for (var i=0;i<btns.length;i++) btns[i].className='wa-fmt-btn'+(btns[i].dataset.fmt===fmt?' active':'');
+  if (waState.previewText) {
+    waState.previewText = waGenerateText();
+    var pv = document.getElementById('wa-preview');
+    if (pv) { pv.className='wa-preview-area'; pv.textContent=waState.previewText; }
+  }
+}
+
+function waGenerateText() {
+  var s = waState;
+  var b = function(t){ return s.formato==='whatsapp' ? '*'+t+'*' : t; };
+
+  var lines = [];
+  lines.push('Obrigado por entrar em contato com a '+b('Dom Travel')+'.');
+  lines.push('Segue abaixo seu orçamento conforme solicitado.');
+  lines.push('');
+  if (s.destino)   lines.push('🌎 '+b('Destino:')+' '+s.destino);
+  if (s.dataIda)   lines.push('➡ '+b('Ida:')+' '+s.dataIda);
+  if (s.dataVolta) lines.push('⬅ '+b('Volta:')+' '+s.dataVolta);
+  if (s.saidaDe)   lines.push('✈️ '+b('Saída de:')+' '+s.saidaDe);
+
+  if (s.vooIda || s.vooVolta) {
+    lines.push('');
+    lines.push('✈️ '+b('Horário dos voos:'));
+    if (s.vooIda)   lines.push(s.vooIda);
+    if (s.vooVolta) lines.push(s.vooVolta);
+    if (s.obsVoos)  lines.push(s.obsVoos);
+  }
+
+  var inclusos = (s.inclusoPacote||'').split('\n').map(function(l){return l.trim();}).filter(Boolean);
+  if (inclusos.length) {
+    lines.push(''); lines.push('---'); lines.push(b('Incluso no Pacote'));
+    inclusos.forEach(function(item){ lines.push('✅ '+item); });
+  }
+
+  var hasH = s.hoteis3.length+s.hoteis4.length+s.hoteis5.length > 0;
+  if (hasH) {
+    lines.push(''); lines.push('---'); lines.push(b('Opções de Hospedagem'));
+    if (s.hoteis3.length) {
+      lines.push(b('🏨 Hotéis ⭐⭐⭐'));
+      s.hoteis3.forEach(function(h){ if(h.nome) lines.push(h.nome+(h.preco?' - '+h.preco:'')); });
+    }
+    if (s.hoteis4.length) {
+      if (s.hoteis3.length) lines.push('');
+      lines.push(b('🏨 Hotéis ⭐⭐⭐⭐'));
+      s.hoteis4.forEach(function(h){ if(h.nome) lines.push(h.nome+(h.preco?' - '+h.preco:'')); });
+    }
+    if (s.hoteis5.length) {
+      if (s.hoteis3.length||s.hoteis4.length) lines.push('');
+      lines.push(b('🏨 Hotéis ⭐⭐⭐⭐⭐'));
+      s.hoteis5.forEach(function(h){ if(h.nome) lines.push(h.nome+(h.preco?' - '+h.preco:'')); });
+    }
+    lines.push('');
+    lines.push('💰 '+b('Valores acima são para ')+(s.pax||'2')+' pax em '+(s.apto||'apto duplo')+'.');
+  }
+
+  var hasOpc = s.opcionais.some(function(o){return o.nome;});
+  if (hasOpc) {
+    lines.push(''); lines.push('---'); lines.push(b('Opcionais'));
+    s.opcionais.forEach(function(o){ if(o.nome) lines.push('• '+o.nome+(o.preco?' - '+o.preco:'')); });
+  }
+
+  if (s.formaPagamento) {
+    lines.push(''); lines.push('---'); lines.push(b('Formas de Pagamento'));
+    s.formaPagamento.split('|').forEach(function(part){
+      var t = part.trim(); if (!t) return;
+      var ci = t.indexOf(':');
+      if (ci>-1 && s.formato==='whatsapp') {
+        lines.push('*💳 '+t.substring(0,ci).trim()+' |* '+t.substring(ci+1).trim());
+      } else {
+        lines.push('💳 '+t);
+      }
+    });
+  }
+
+  if (s.observacoes) {
+    lines.push(''); lines.push('---'); lines.push(b('Observações:'));
+    s.observacoes.split('\n').filter(Boolean).forEach(function(l){
+      var ci = l.indexOf(':');
+      if (ci>-1 && s.formato==='whatsapp') {
+        lines.push(b(l.substring(0,ci).trim()+':')+' '+l.substring(ci+1).trim());
+      } else { lines.push(l); }
+    });
+  }
+
+  lines.push('');
+  if (s.site)      lines.push('🌍 '+b('Acesse nosso site:')+' '+s.site);
+  if (s.instagram) lines.push('👍 '+b('Siga no Instagram:')+' '+s.instagram);
+
+  return lines.join('\n');
+}
+
+function waGenerate() {
+  waSaveFormState();
+  waState.previewText = waGenerateText();
+  var pv = document.getElementById('wa-preview');
+  if (pv) {
+    pv.className = 'wa-preview-area';
+    pv.textContent = waState.previewText;
+  } else {
+    waRenderGenerator();
+  }
+}
+
+function waCopyPreview() {
+  var text = waState.previewText;
+  if (!text) { alert('Gere uma proposta primeiro.'); return; }
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(text).then(function(){ waCopyToast(); }).catch(function(){ waCopyFallback(text); });
+  } else { waCopyFallback(text); }
+}
+
+function waCopyFallback(text) {
+  var ta=document.createElement('textarea'); ta.value=text; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta);
+  waCopyToast();
+}
+
+function waCopyToast() {
+  var btn = document.querySelector('.wa-copy-btn');
+  if (btn) { var orig=btn.textContent; btn.textContent='✅ Copiado!'; setTimeout(function(){ btn.textContent=orig; }, 2000); }
+}
+
+function waExtractAI() {
+  var ta = document.getElementById('wa-ai-text');
+  if (!ta||!ta.value.trim()) { alert('Cole o texto da cotação primeiro.'); return; }
+  var apiKey = localStorage.getItem('dt_k5');
+  if (!apiKey) { alert('Configure a chave da API primeiro.'); return; }
+  var btn = document.getElementById('wa-ai-btn');
+  if (btn) { btn.disabled=true; btn.textContent='⏳ Extraindo...'; }
+  var prompt = 'Analise o texto de cotação de viagem e extraia os dados em JSON com EXATAMENTE estes campos (string vazia se não encontrar, arrays vazios se não houver itens): {"destino":"","saidaDe":"","dataIda":"","dataVolta":"","pax":"","apto":"","vooIda":"","vooVolta":"","obsVoos":"","inclusoPacote":"itens separados por newline","hoteis3":[{"nome":"","preco":""}],"hoteis4":[{"nome":"","preco":""}],"hoteis5":[{"nome":"","preco":""}],"opcionais":[{"nome":"","preco":""}],"formaPagamento":"","observacoes":""}. Responda APENAS com o JSON.\n\nTexto:\n'+ta.value.trim();
+  fetch('https://api.anthropic.com/v1/messages',{
+    method:'POST',
+    headers:{'x-api-key':apiKey,'anthropic-version':'2023-06-01','content-type':'application/json','anthropic-dangerous-direct-browser-access':'true'},
+    body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:2048,messages:[{role:'user',content:prompt}]})
+  }).then(function(r){return r.json();}).then(function(d){
+    try {
+      var data = JSON.parse(d.content[0].text.replace(/```json|```/g,'').trim());
+      if(data.destino) waState.destino=data.destino;
+      if(data.saidaDe) waState.saidaDe=data.saidaDe;
+      if(data.dataIda) waState.dataIda=data.dataIda;
+      if(data.dataVolta) waState.dataVolta=data.dataVolta;
+      if(data.pax) waState.pax=data.pax;
+      if(data.apto) waState.apto=data.apto;
+      if(data.vooIda) waState.vooIda=data.vooIda;
+      if(data.vooVolta) waState.vooVolta=data.vooVolta;
+      if(data.obsVoos) waState.obsVoos=data.obsVoos;
+      if(data.inclusoPacote) waState.inclusoPacote=data.inclusoPacote;
+      if(data.hoteis3&&data.hoteis3.length) waState.hoteis3=data.hoteis3;
+      if(data.hoteis4&&data.hoteis4.length) waState.hoteis4=data.hoteis4;
+      if(data.hoteis5&&data.hoteis5.length) waState.hoteis5=data.hoteis5;
+      if(data.opcionais&&data.opcionais.length) waState.opcionais=data.opcionais;
+      if(data.formaPagamento) waState.formaPagamento=data.formaPagamento;
+      if(data.observacoes) waState.observacoes=data.observacoes;
+      waState.innerTab='manual';
+      waRenderGenerator();
+    } catch(e) {
+      alert('Erro ao processar resposta da IA. Tente novamente.');
+      if(btn){btn.disabled=false;btn.textContent='✨ Extrair e gerar com IA';}
+    }
+  }).catch(function(){
+    alert('Erro de conexão com a API.');
+    if(btn){btn.disabled=false;btn.textContent='✨ Extrair e gerar com IA';}
+  });
+}
+
+function waRenderGenerator() {
+  var wrap = document.getElementById('orc-wrap');
+  if (!wrap) return;
+  var s = waState;
+  var e = waEsc;
+
+  function hotelRows(arr, star) {
+    var h='';
+    for (var i=0;i<arr.length;i++) {
+      h += '<div class="wa-list-row">' +
+        '<input class="wa-inp" id="wa-hotel'+star+'-nome-'+i+'" value="'+e(arr[i].nome)+'" placeholder="Nome do hotel">' +
+        '<input class="wa-inp price" id="wa-hotel'+star+'-preco-'+i+'" value="'+e(arr[i].preco)+'" placeholder="R$ 0,00">' +
+        '<button class="wa-del-btn" onclick="waRemoveHotel(\''+star+'\','+i+')">×</button>' +
+        '</div>';
+    }
+    h += '<button class="wa-add-btn" onclick="waAddHotel(\''+star+'\')">+ Adicionar hotel</button>';
+    return h;
+  }
+
+  function opcRows(arr) {
+    var h='';
+    for (var i=0;i<arr.length;i++) {
+      h += '<div class="wa-list-row">' +
+        '<input class="wa-inp" id="wa-opc-nome-'+i+'" value="'+e(arr[i].nome)+'" placeholder="Nome do opcional">' +
+        '<input class="wa-inp price" id="wa-opc-preco-'+i+'" value="'+e(arr[i].preco)+'" placeholder="R$ 0,00">' +
+        '<button class="wa-del-btn" onclick="waRemoveOpcional('+i+')">×</button>' +
+        '</div>';
+    }
+    h += '<button class="wa-add-btn" onclick="waAddOpcional()">+ Adicionar opcional</button>';
+    return h;
+  }
+
+  var manualForm =
+    '<div class="wa-section"><div class="wa-section-title">🌎 Destino</div>' +
+    '<div class="wa-field"><div class="wa-label">Destino</div><input class="wa-inp" id="wa-destino" value="'+e(s.destino)+'" placeholder="Ex: Cancún, México"></div>' +
+    '<div class="wa-grid2">' +
+    '<div class="wa-field"><div class="wa-label">Saída de</div><input class="wa-inp" id="wa-saida" value="'+e(s.saidaDe)+'" placeholder="Ex: São Paulo"></div>' +
+    '<div class="wa-field"><div class="wa-label">Passageiros (pax)</div><input class="wa-inp" id="wa-pax" value="'+e(s.pax)+'" placeholder="Ex: 2"></div>' +
+    '</div><div class="wa-grid2">' +
+    '<div class="wa-field"><div class="wa-label">Data Ida</div><input class="wa-inp" id="wa-data-ida" value="'+e(s.dataIda)+'" placeholder="DD/MM/AAAA"></div>' +
+    '<div class="wa-field"><div class="wa-label">Data Volta</div><input class="wa-inp" id="wa-data-volta" value="'+e(s.dataVolta)+'" placeholder="DD/MM/AAAA"></div>' +
+    '</div>' +
+    '<div class="wa-field"><div class="wa-label">Tipo de apartamento</div><input class="wa-inp" id="wa-apto" value="'+e(s.apto)+'" placeholder="Ex: Duplo Standard"></div>' +
+    '</div>' +
+    '<div class="wa-section"><div class="wa-section-title">✈️ Voos</div>' +
+    '<div class="wa-field"><div class="wa-label">Voo Ida (horário)</div><input class="wa-inp" id="wa-voo-ida" value="'+e(s.vooIda)+'" placeholder="Ex: GRU 08:00 → CUN 14:30"></div>' +
+    '<div class="wa-field"><div class="wa-label">Voo Volta (horário)</div><input class="wa-inp" id="wa-voo-volta" value="'+e(s.vooVolta)+'" placeholder="Ex: CUN 16:00 → GRU 06:20+1"></div>' +
+    '<div class="wa-field"><div class="wa-label">Observação dos voos</div><input class="wa-inp" id="wa-obs-voos" value="'+e(s.obsVoos)+'" placeholder="Ex: Conexão em Bogotá"></div>' +
+    '</div>' +
+    '<div class="wa-section"><div class="wa-section-title">✅ Incluso no Pacote</div>' +
+    '<textarea class="wa-inp wa-ta" id="wa-incluso" placeholder="Um item por linha">'+e(s.inclusoPacote)+'</textarea>' +
+    '</div>' +
+    '<div class="wa-section"><div class="wa-section-title">🏨 Hotéis ⭐⭐⭐</div>'+hotelRows(s.hoteis3,'3')+'</div>' +
+    '<div class="wa-section"><div class="wa-section-title">🏨 Hotéis ⭐⭐⭐⭐</div>'+hotelRows(s.hoteis4,'4')+'</div>' +
+    '<div class="wa-section"><div class="wa-section-title">🏨 Hotéis ⭐⭐⭐⭐⭐</div>'+hotelRows(s.hoteis5,'5')+'</div>' +
+    '<div class="wa-section"><div class="wa-section-title">🎯 Opcionais</div>'+opcRows(s.opcionais)+'</div>' +
+    '<div class="wa-section"><div class="wa-section-title">💳 Formas de Pagamento</div>' +
+    '<textarea class="wa-inp wa-ta" id="wa-forma-pag" rows="3">'+e(s.formaPagamento)+'</textarea>' +
+    '</div>' +
+    '<div class="wa-section"><div class="wa-section-title">📝 Observações</div>' +
+    '<textarea class="wa-inp wa-ta" id="wa-obs" placeholder="Obs1: texto aqui...">'+e(s.observacoes)+'</textarea>' +
+    '</div>' +
+    '<div class="wa-section"><div class="wa-section-title">🌐 Contato</div>' +
+    '<div class="wa-grid2">' +
+    '<div class="wa-field"><div class="wa-label">Site</div><input class="wa-inp" id="wa-site" value="'+e(s.site)+'" placeholder="www.domtravel.com.br"></div>' +
+    '<div class="wa-field"><div class="wa-label">Instagram</div><input class="wa-inp" id="wa-instagram" value="'+e(s.instagram)+'" placeholder="@bydomtravel"></div>' +
+    '</div></div>' +
+    '<div class="wa-format-row"><span class="wa-format-lbl">Formato:</span>' +
+    '<button class="wa-fmt-btn'+(s.formato==='whatsapp'?' active':'')+'" data-fmt="whatsapp" onclick="waSetFormato(\'whatsapp\')">WhatsApp</button>' +
+    '<button class="wa-fmt-btn'+(s.formato==='plain'?' active':'')+'" data-fmt="plain" onclick="waSetFormato(\'plain\')">Texto simples</button>' +
+    '</div>' +
+    '<button class="wa-gen-btn" onclick="waGenerate()">💬 Gerar Proposta</button>';
+
+  var aiForm =
+    '<div class="wa-section"><div class="wa-section-title">✨ Extrair dados com IA</div>' +
+    '<div class="wa-label" style="margin-bottom:6px">Cole o texto completo da cotação</div>' +
+    '<textarea class="wa-ai-ta" id="wa-ai-text" placeholder="Cole aqui o texto da cotação — preços, datas, hotel, voos..."></textarea>' +
+    '<button class="wa-ai-btn" id="wa-ai-btn" onclick="waExtractAI()">✨ Extrair e gerar com IA</button>' +
+    '</div>';
+
+  var leftCol =
+    '<div class="wa-form-col">' +
+    '<div class="wa-inner-tabs">' +
+    '<button class="wa-inner-tab'+(s.innerTab==='manual'?' active':'')+'" onclick="waSwitchTab(\'manual\')">📝 Formulário Manual</button>' +
+    '<button class="wa-inner-tab'+(s.innerTab==='ai'?' active':'')+'" onclick="waSwitchTab(\'ai\')">✨ Extrair com IA</button>' +
+    '</div>' +
+    (s.innerTab==='manual' ? manualForm : aiForm) +
+    '</div>';
+
+  var previewContent = s.previewText
+    ? '<div class="wa-preview-area" id="wa-preview">'+e(s.previewText)+'</div>'
+    : '<div class="wa-preview-empty" id="wa-preview"><div style="font-size:36px">💬</div><div>Preencha o formulário e clique em<br><strong>Gerar Proposta</strong></div></div>';
+
+  var rightCol =
+    '<div class="wa-preview-col">' +
+    '<div class="wa-preview-hd"><span class="wa-preview-title">Preview da Proposta</span>' +
+    '<button class="wa-copy-btn" onclick="waCopyPreview()">📋 Copiar</button></div>' +
+    previewContent +
+    '</div>';
+
+  wrap.innerHTML =
+    '<div class="orc-mode-tabs">' +
+    '<button class="orc-mode-tab" onclick="switchOrcTab(\'prof\')">📄 Gerador Profissional</button>' +
+    '<button class="orc-mode-tab active" onclick="switchOrcTab(\'wa\')">💬 Gerador WhatsApp</button>' +
+    '</div>' +
+    '<div class="wa-layout">'+leftCol+rightCol+'</div>';
 }
 </script>
 </body>
